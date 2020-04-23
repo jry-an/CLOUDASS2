@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  #profile {
+      position: absolute;
+      right: 0px;
+  }
+
+  div.sticky {
+      position: sticky;
+      top: 0;
+  }
+
+  .BookMark {
+    position: absolute;
+    left: 0px;
+
+    box-sizing: border-box;
+    width: 370px;
+    height: 337px;
+    padding: 15px;
+    border: 2px solid grey;
+    border-style: ridge;
+  }
+
+  .Consulation {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    box-sizing: border-box;
+    width: 370px;
+    height: 340px;
+    padding: 15px;
+    border: 2px solid grey;
+    border-style: ridge;
+}
+
+.CourseTrends {
+    position: absolute;
+    right: 0px;
+
+    box-sizing: border-box;
+    width: 370px;
+    height: 337px;
+    padding: 15px;
+    border: 2px solid grey;
+    border-style: ridge;
+}
+
+.UniversityNews {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    box-sizing: border-box;
+    width: 370px;
+    height: 340px;
+    padding: 15px;
+    border: 2px solid grey;
+    border-style: ridge;
+}
+
+.SearchBar {
+    position:absolute;  
+    left:30%;
+    right: 50%;
+    top:15%;
+    width:50%;
+
+}
+
+.Content {
+    position: absolute;
+    left: 25%;
+    right: 50%;
+    top: 30%;
+    bottom: 50%;
+
+    box-sizing: border-box;
+    width: 769px;
+    height: 480px;
+    padding: 15px;
+    border: 2px solid grey;
+    border-style: ridge;
+}

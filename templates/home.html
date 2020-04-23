@@ -1,11 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CourseDelivery: Home</title>
-</head>
-<body>
-<h1>Course Delivery</h1>
-  <input type="text" placeholder="Search..">
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block head %}
+
+<div class="topnav">
+  <a href="#home">Menu</a>
+  <a id="profile" href="#about">Profile</a>
+</div>
+
+{% endblock %}
+{% block body %}
+
+<div class="BookMark">
+<h2>BookMark<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  </div>
+
+<div class="Consulation">
+<h2>Consulation<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  </div>
+
+<div class="CourseTrends">
+<h2>CourseTrends<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <div class="UniversityNews">
+  <h2>University News<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  </div>
+
+<div class="SearchBar">
+<form action="">
+  <input type="text" placeholder="Search..." name="search" size="80">
+  <button type="submit">HERE </button>
+</form>
+</div>
+
+<div class="Content">
+<h1>Content> <h1>
+<p>This is an example sentence right here</p>
+</div>
+
+ {% endblock %}
+
+
+  
