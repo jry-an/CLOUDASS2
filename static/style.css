@@ -41,8 +41,8 @@ body {
     top: 48px;
 
     box-sizing: border-box;
-    width: 370px;
-    height: 337px;
+    width: 24%;
+    height: 46.5%;
     padding: 15px;
     border: 2px solid grey;
     border-style: ridge;
@@ -54,8 +54,8 @@ body {
     left: 0px;
 
     box-sizing: border-box;
-    width: 370px;
-    height: 340px;
+    width: 24%;
+    height: 47.2%;
     padding: 15px;
     border: 2px solid grey;
     border-style: ridge;
@@ -67,8 +67,8 @@ body {
     top: 48px;
 
     box-sizing: border-box;
-    width: 370px;
-    height: 337px;
+    width: 24%;
+    height: 46.5%;
     padding: 15px;
     border: 2px solid grey;
     border-style: ridge;
@@ -80,8 +80,8 @@ body {
     right: 0px;
 
     box-sizing: border-box;
-    width: 370px;
-    height: 340px;
+    width: 24%;
+    height: 47.2%;
     padding: 15px;
     border: 2px solid grey;
     border-style: ridge;
@@ -92,13 +92,11 @@ body {
 
   position: relative;
   padding: 16px;
-  top: 200px;
-  margin-left: 450px;
-
+  margin-top: 15%;
 
     box-sizing: border-box;
-    margin-left: 400px;
-    width: 740px;
+    margin-left: 26%;
+    width: 48%;
     padding: 5px;
     height: 450px;
     border: 2px solid grey;
@@ -108,16 +106,13 @@ body {
   
 }
 
-#SearchBar {
+.SearchBar {
   position: relative;
   top: 100px;
-  margin-left: 450px;
+  margin-left: 30%;
 width: 40%;
   
 }
 
-#Searchbutton {
-  position: relative;
-  top: 78px;
-  margin-left: 1063px;}
+
 
