@@ -100,20 +100,24 @@ body {
     margin-left: 400px;
     width: 740px;
     padding: 5px;
-    height: 500px;
+    height: 450px;
     border: 2px solid grey;
     border-style: ridge;
+    overflow: auto;
 
   
 }
 
 #SearchBar {
   position: relative;
-  bottom: 100px;
-  width: 90%;
+  top: 100px;
+  margin-left: 450px;
+width: 40%;
+  
 }
 
 #Searchbutton {
   position: relative;
-  bottom: 100px;
-}
+  top: 78px;
+  margin-left: 1063px;}
+
