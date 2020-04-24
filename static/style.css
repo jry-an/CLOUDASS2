@@ -6,10 +6,13 @@ body {
   .topnav {
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    width: 100%;
   }
   
   .topnav a {
     float: left;
+    display:block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -32,14 +35,10 @@ body {
       right: 0px;
   }
 
-  div.sticky {
-      position: sticky;
-      top: 0;
-  }
-
   .BookMark {
-    position: absolute;
+    position: fixed;
     left: 0px;
+    top: 48px;
 
     box-sizing: border-box;
     width: 370px;
@@ -50,7 +49,7 @@ body {
   }
 
   .Consulation {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0px;
 
@@ -63,8 +62,9 @@ body {
 }
 
 .CourseTrends {
-    position: absolute;
+    position: fixed;
     right: 0px;
+    top: 48px;
 
     box-sizing: border-box;
     width: 370px;
@@ -75,7 +75,7 @@ body {
 }
 
 .UniversityNews {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     right: 0px;
 
@@ -87,26 +87,33 @@ body {
     border-style: ridge;
 }
 
-.SearchBar {
-    position:absolute;  
-    left:30%;
-    right: 50%;
-    top:15%;
-    width:50%;
-
-}
 
 .Content {
-    position: absolute;
-    left: 25%;
-    right: 50%;
-    top: 30%;
-    bottom: 50%;
+
+  position: relative;
+  padding: 16px;
+  top: 200px;
+  margin-left: 450px;
+
 
     box-sizing: border-box;
-    width: 769px;
-    height: 480px;
-    padding: 15px;
+    margin-left: 400px;
+    width: 740px;
+    padding: 5px;
+    height: 500px;
     border: 2px solid grey;
     border-style: ridge;
+
+  
+}
+
+#SearchBar {
+  position: relative;
+  bottom: 100px;
+  width: 90%;
+}
+
+#Searchbutton {
+  position: relative;
+  bottom: 100px;
 }
