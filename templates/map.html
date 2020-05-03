@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Local Schools</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+
+    <!-- Produces the google map (Loading the Google Map API key) -->
+    <!-- Loads the map API from google -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHy5bRAIpYqxHz3E4gLSq_ryzBmG_Cc14&callback=initMap"
+    type="text/javascript"></script>
+
+    <!-- Identifiyng our function below -->
+    <script type="text/javascript">
+
+    // Creates the google map
+    function initMap() {
+        
+        // lat and lng is selected from database back on applicaton.py
+        var myLatLng = {lat: {{school.lat}}, lng: {{school.lng}}};
+
+       var map =  new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 16
+          });
+
+          // Displays a red marker on the coordinates
+          var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+        });
+    }
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <!-- Grabs the selected uni name from database -->
+    <h1>{{school.name}} University </h1>
+    <div id="map" style="width:100%; height:500px;"></div>
+</div>
+</body>
+</html>
+
