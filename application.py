@@ -1,6 +1,5 @@
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, url_for, redirect
-import sqlalchemy
 
 # Reference the current module which is application.py
 app = Flask(__name__)
@@ -22,7 +21,6 @@ universities = (
 # lookup by key by creating a dictionary, for every object in universities
 # we create a school object inside uni_by_key
 uni_by_key = {school.key: school for school in universities}
-
 
 @app.route("/")
 def index():
@@ -47,4 +45,6 @@ def show_school(school_code):
     else:
         abort(404)
 
-app.run(host='localhost', debug=True)
+if __name__ == "__main__":
+
+    app.run(host='localhost', debug=True)
