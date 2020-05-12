@@ -13,8 +13,6 @@ kind = 'News'
 def new_news(id, title, content):
     entity = datastore.Entity(key=datastore_client.key(kind, id))
 
-    # TODO don't allow duplicate ID's
-
     # create new news post
     entity['title'] = title.decode('utf-8')
     entity['content'] = content.decode('utf-8')
@@ -24,8 +22,10 @@ def new_news(id, title, content):
 # The URL endpoint for a particular a thing in the app.
 @app.route("/", methods=['GET'])
 def home():
-    # Store the current access time in Datastore.
-    return render_template('home.html')
+    
+    query = datastore_client.query(kind=kind)
+    news_list = list(query.fetch())
+    return render_template('home.html', news_list=news_list)
 
 # render news page to enter a new post
 @app.route('/news')

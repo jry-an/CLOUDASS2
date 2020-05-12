@@ -6,8 +6,12 @@
   <input type="text" placeholder="Search..">
 
 <div>
-{%  for story in news %}
-<p>{{ story.title }}</p>
+  <h1>NEWS</h1>
+{%  for news in news_list %}
+<ul>
+<li>{{ news.title }}</li>
+<li>{{ news.content }}</li>
+</ul>
 {% endfor %}
 </div>
 {% endblock %}
