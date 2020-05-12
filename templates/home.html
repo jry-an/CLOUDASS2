@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CourseDelivery: Home</title>
-</head>
-<body>
+{% block head %}
+
+{% endblock %}
+{% block body %}
 <h1>Course Delivery</h1>
   <input type="text" placeholder="Search..">
+
+<div>
+{%  for story in news %}
+<p>{{ story.title }}</p>
+{% endfor %}
+</div>
+{% endblock %}
+
+
+
 </body>
 </html>

@@ -1,6 +1,0 @@
-google
-# [START ndb_version]
-google-cloud-ndb==1.2.0
-# [END ndb_version]
-Flask==1.1.2
-google-cloud-datastore==1.12.0
