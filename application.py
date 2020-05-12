@@ -22,11 +22,9 @@ def new_news(id, title, content):
 
 
 # The URL endpoint for a particular a thing in the app.
-@app.route("/")
+@app.route("/", methods=['GET'])
 def home():
     # Store the current access time in Datastore.
-    new_news(4, 'John', 'password')
-
     return render_template('home.html')
 
 # render news page to enter a new post
@@ -37,10 +35,13 @@ def news():
 
 @app.route('/news', methods=['GET','POST'])
 def news_post():
+    # get title and content from html
     news_title = request.form['title']
     news_content = request.form['content']
     
+    # post new news to datastore entity
     new_news(1, news_title, news_content)
+
     return render_template('home.html')
 
     
