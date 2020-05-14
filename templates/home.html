@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
+{% set school = universities %}
+{% set rmitLat = school[0].lat %}
+{% set rmitLng = school[0].lng %}
+
+{% set monashLat = school[1].lat %}
+{% set monashLng = school[1].lng %}
+
+{% set swinburneLat = school[2].lat %}
+{% set swinburneLng = school[2].lng %}
 
 {% block head %}
 
@@ -16,6 +25,7 @@
   </nav>
 
   <h1>Choose a University</h1>
+  <p>{{ school[1].name }}</p>
   <!-- for every object in the universities tuple produces the code below -->
     {% for school in universities %}
     <p><a href="{{school.key}}">{{school.name}}</a></p>
@@ -24,6 +34,12 @@
 
 <div class="Consulation">
 <h2>Consulation<h2>
+<!-- first array is the row and second array is the column-->
+     {% for row in results %}
+        <h1> {{ row }} </h1>
+      {% endfor %}
+
+
   <nav>
     <ul>
       <li><a href="#">Bookmark1</a></li>
@@ -59,18 +75,123 @@
 
 
 <div class="Content">
-<form action="">
-  <input id="SearchBar" type="text" placeholder="Search..." name="search" size="80">
-  <button type="submit">Search </button>
-  
-</form>
-<h1>Content> <h1>
-<p>This is an example sentence right here As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
-As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
-As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Select University</button>
+  <div id="myDropdown" class="dropdown-content">
+    <button class="topbtn"  data-button='rmit'> {{ school[0].name }}</button>
+    <button class="topbtn"  data-button='monash'> {{ school[1].name }}</button>
+    <button class="topbtn"  data-button='swinburne'> {{ school[2].name }}</button>
+  </div>
 
-As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.</p>
 </div>
+</form>
+
+
+<script>
+function myFunction() {
+  var a = document.getElementById("myDropdown").classList.toggle("show");
+  if (a.style.display === "none") {
+    a.style.display = "block";
+    var d = "DA"
+  } else {
+    a.style.display = "none";
+  }
+}
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("SearchBar");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("Content");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+document.querySelectorAll('.topbtn').forEach(function(item) {
+  let getBtnData = item.dataset.button;
+  item.addEventListener('click', function(e) {
+    document.querySelector('[data-type="' + getBtnData + '"]').classList.toggle('visibility')
+  })
+
+})
+
+</script>
+
+
+  <script type="text/javascript">
+
+    // Creates the google map
+    function initMap() {
+        // RMIT Google Map Display
+        var myRMITLatLng = {lat: {{rmitLat}}, lng: {{ rmitLng }}};
+        var RMITmap =  new google.maps.Map(document.getElementById('rmitMap'), {
+            center: myRMITLatLng,
+            zoom: 16
+          });
+          // Displays a red marker on the coordinates
+          var RMITmarker = new google.maps.Marker({
+          position: myRMITLatLng,
+          map: RMITmap,
+          
+        });
+      
+        // Swinburne Google Map Display
+        var mySwinLatLng = {lat: {{swinburneLat}}, lng: {{ swinburneLng }}};
+        var swinMap =  new google.maps.Map(document.getElementById('swinburneMap'), {
+            center: mySwinLatLng,
+            zoom: 16
+          });
+         var SWINmarker = new google.maps.Marker({
+          position: mySwinLatLng,
+          map: swinMap,
+        });
+
+       // Monash Google Map Display
+       var myMonashLatLng = {lat: {{monashLat}}, lng: {{ monashLng }}};
+       var monashMap =  new google.maps.Map(document.getElementById('monashMap'), {
+            center: myMonashLatLng,
+            zoom: 16
+          });
+          // Displays a red marker on the coordinates
+          var monashMarker = new google.maps.Marker({
+          position: myMonashLatLng,
+          map: monashMap,
+        });
+    }
+    </script>
+    
+<div id="contactus" data-type='swinburne'>
+  <center>
+    <div id="swinburneMap" style="width:60%; height:500px;"></div>
+      <p> Swinburne Content </p>
+    <center>
+</div> 
+
+
+<div id="contactus" data-type='monash'>
+  <center>
+    <div id="monashMap" style="width:60%; height:500px;"></div>
+      <p> Monash Content </p>
+
+    <center>
+</div> 
+
+
+<div id="contactus" data-type='rmit'>
+  <center>
+    <div id="rmitMap" style="width:60%; height:500px;"></div>
+  <p>This is an example sentence right here As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+
+    <center>
+</div>
+
+
 
  {% endblock %}
 
