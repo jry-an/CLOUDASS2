@@ -1,22 +1,86 @@
+{% extends 'base.html' %}
+
 {% block head %}
 
 {% endblock %}
 {% block body %}
-<h1>Course Delivery</h1>
-  <input type="text" placeholder="Search..">
 
-<div>
-  <h1>NEWS</h1>
-{%  for news in news_list %}
-<ul>
-<li>{{ news.title }}</li>
-<li>{{ news.content }}</li>
-</ul>
-{% endfor %}
+<div class="BookMark">
+<h2>BookMark<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+
+  <h1>Choose a University</h1>
+  <!-- for every object in the universities tuple produces the code below -->
+    {% for school in universities %}
+    <p><a href="{{school.key}}">{{school.name}}</a></p>
+    {% endfor %}
+  </div>
+
+  <div>
+    <h1>NEWS</h1>
+  {%  for news in news_list %}
+  <ul>
+  <li>{{ news.title }}</li>
+  <li>{{ news.content }}</li>
+  </ul>
+  {% endfor %}
+  </div>
+
+<div class="Consulation">
+<h2>Consulation<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  </div>
+
+<div class="CourseTrends">
+<h2>CourseTrends<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  <script async src="https://cse.google.com/cse.js?cx=002274883730334799567:cfm1dvjo7d7"></script>
+<div class="gcse-search"></div>
+  </div>
+
+  <div class="UniversityNews">
+  <h2>University News<h2>
+  <nav>
+    <ul>
+      <li><a href="#">Bookmark1</a></li>
+      <li><a href="#">Bookmark2</a></li>
+      <li><a href="#">Bookmark3</a></li>
+    </ul>
+  </nav>
+  </div>
+
+
+<div class="Content">
+<form action="">
+  <input id="SearchBar" type="text" placeholder="Search..." name="search" size="80">
+  <button type="submit">Search </button>
+  
+</form>
+<h1>Content> <h1>
+<p>This is an example sentence right here As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
+
+As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.</p>
 </div>
-{% endblock %}
 
+ {% endblock %}
 
-
-</body>
-</html>
