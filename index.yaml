@@ -1,0 +1,5 @@
+indexes:
+    - kind: News
+      ancestor: no
+      properties:
+      - name: id
