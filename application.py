@@ -1,17 +1,17 @@
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, url_for, redirect
 from decimal import *
-
 import mysql.connector
+import sqlalchemy
+import os
+from google.cloud import bigquery
 
-# import mysql.connector
-# import MySQLdb
 # Grab connection to MySQL workbench which connects to Google Cloud SQL database
-mydb = mysql.connector.connect(host="35.197.188.118", user="aaron", passwd="", database="universities", port=3306)
+mydb = mysql.connector.connect(host="35.197.188.118", user="aaron", passwd="aaron", database="universities", port=3306)
+
+
 # mydb = MySQLdb.connect(host="35.197.188.118", user="aaron", passwd="", database="universities")
-
-
-# Connect to the database
+# mydb = mysql+mysqldb://root@/<dbname>?unix_socket=/cloudsql/<projectid>:<instancename>
 # mydb = pymysql.connect(host="35.197.188.118", user="aaron", passwd="", database="universities")
 
 # Reference the current module which is application.py
@@ -63,34 +63,42 @@ universities = (
 # we create a school object inside uni_by_key
 uni_by_key = {school.key: school for school in universities}
 
+# Construct a BigQuery client object.
+client = bigquery.Client()
+
+query = """SELECT latitude, longitude, MIN(Block_ID) FROM `cloudcoursedelivery.food.food_location` GROUP BY latitude, longitude"""
+cafe_name_query = """SELECT Trading_name, MIN(Block_ID) FROM `cloudcoursedelivery.food.food_location` GROUP BY Trading_name"""
+rows = client.query(query)  # Make an API request
+cafe_rows = client.query(cafe_name_query)
+
+coord = [dict(row) for row in rows]
+cafe_array = [dict(row) for row in cafe_rows]
+
+
+
+
+
+
 @app.route("/")
 def index():
     # fetch all database names in our machine
     mycursor = mydb.cursor()
-
     mycursor.execute("select name from school")
-
     result = mycursor.fetchall()
+    
+
+
+
 
     # Passing in schools tuples
-    return render_template('home.html', universities=universities, results=result)
+    return render_template('home.html', universities=universities, results=result, rows=coord, cafe = cafe_array)
 
 # Anything following the / is to be passed into the function below
-@app.route("/<school_code>")
+@app.route("/map")
+def run():
+    return render_template('map.html', rows=coord, universities=universities)
 
-# Using the passed in variable school_code into the function
-def show_school(school_code):
 
-    # Using school_code to lookup in the uni_by_key dictionary
-    school = uni_by_key.get(school_code)
-
-    # If Found
-    if school:
-        return render_template('map.html', school=school)
-
-    # If not found (Page not found)
-    else:
-        abort(404)
 
 if __name__ == "__main__":
 

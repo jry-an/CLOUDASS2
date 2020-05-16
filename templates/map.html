@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+{% set school = universities %}
+{% set rmitLat = school[0].lat %}
+{% set rmitLng = school[0].lng %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -21,27 +23,37 @@
     // Creates the google map
     function initMap() {
         
-        // lat and lng is selected from database back on applicaton.py
-        var myLatLng = {lat: {{school.lat}}, lng: {{school.lng}}};
-
-       var map =  new google.maps.Map(document.getElementById('map'), {
-            center: myLatLng,
+           var myRMITLatLng = {lat: {{rmitLat}}, lng: {{ rmitLng }}};
+        var map =  new google.maps.Map(document.getElementById('map'), {
+            center: myRMITLatLng,
             zoom: 16
           });
-
           // Displays a red marker on the coordinates
-          var marker = new google.maps.Marker({
-          position: myLatLng,
+          var RMITmarker = new google.maps.Marker({
+          position: myRMITLatLng,
           map: map,
+          
         });
+
+       
+        {% for location in rows %}
+         var point = {lat: {{ location.latitude }}, lng: {{ location.longitude }}};
+    var marker = new google.maps.Marker({
+    position: point,
+    map: map,
+    });
+  {% endfor %}
+
     }
+
     </script>
 </head>
 <body>
 <div class="container">
 
+
+ 
     <!-- Grabs the selected uni name from database -->
-    <h1>{{school.name}} University </h1>
     <div id="map" style="width:100%; height:500px;"></div>
 </div>
 </body>

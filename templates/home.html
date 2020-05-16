@@ -3,11 +3,14 @@
 {% set rmitLat = school[0].lat %}
 {% set rmitLng = school[0].lng %}
 
-{% set monashLat = school[1].lat %}
-{% set monashLng = school[1].lng %}
+{% set melbLat = school[1].lat %}
+{% set melbLng = school[1].lng %}
 
-{% set swinburneLat = school[2].lat %}
-{% set swinburneLng = school[2].lng %}
+{% set vicLat = school[2].lat %}
+{% set vicLng = school[2].lng %}
+
+
+
 
 {% block head %}
 
@@ -15,29 +18,16 @@
 {% block body %}
 
 <div class="BookMark">
-<h2>BookMark<h2>
-  <nav>
-    <ul>
-      <li><a href="#">Bookmark1</a></li>
-      <li><a href="#">Bookmark2</a></li>
-      <li><a href="#">Bookmark3</a></li>
-    </ul>
-  </nav>
 
-  <h1>Choose a University</h1>
-  <p>{{ school[1].name }}</p>
-  <!-- for every object in the universities tuple produces the code below -->
-    {% for school in universities %}
-    <p><a href="{{school.key}}">{{school.name}}</a></p>
-    {% endfor %}
+<h2>BookMark<h2>
+
+
   </div>
+
 
 <div class="Consulation">
 <h2>Consulation<h2>
 <!-- first array is the row and second array is the column-->
-     {% for row in results %}
-        <h1> {{ row }} </h1>
-      {% endfor %}
 
 
   <nav>
@@ -51,15 +41,27 @@
 
 <div class="CourseTrends">
 <h2>CourseTrends<h2>
-  <nav>
-    <ul>
-      <li><a href="#">Bookmark1</a></li>
-      <li><a href="#">Bookmark2</a></li>
-      <li><a href="#">Bookmark3</a></li>
-    </ul>
-  </nav>
-  <script async src="https://cse.google.com/cse.js?cx=002274883730334799567:cfm1dvjo7d7"></script>
-<div class="gcse-search"></div>
+
+<button type="button" onclick="doHeatMap({{rows}})">Try it</button>
+ <p id="demo"></p>
+<script>
+  function doHeatMap(rows){
+  let heatmapData = [];
+ 
+  for (let i = 0; i < rows.length; i++) {
+      let f = rows[i].f;
+      let coords = { lat: parseFloat(f[0].v), lng: parseFloat(f[1].v) };
+      let latLng = new google.maps.LatLng(coords);
+      heatmapData.push(latLng);
+  }
+        document.getElementById("demo").innerHTML = heatmapData;
+
+    }
+
+      var test = {testing:"{{rows}}"};
+        document.getElementById("demo").innerHTML = test["testing"];
+    }
+    </script>
   </div>
 
   <div class="UniversityNews">
@@ -79,8 +81,8 @@
   <button onclick="myFunction()" class="dropbtn">Select University</button>
   <div id="myDropdown" class="dropdown-content">
     <button class="topbtn"  data-button='rmit'> {{ school[0].name }}</button>
-    <button class="topbtn"  data-button='monash'> {{ school[1].name }}</button>
-    <button class="topbtn"  data-button='swinburne'> {{ school[2].name }}</button>
+    <button class="topbtn"  data-button='melbourne'> {{ school[1].name }}</button>
+    <button class="topbtn"  data-button='victoria'> {{ school[2].name }}</button>
   </div>
 
 </div>
@@ -124,10 +126,14 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
 </script>
 
 
-  <script type="text/javascript">
+
+
+
+<script type="text/javascript">
 
     // Creates the google map
     function initMap() {
+////////////////////////////////////////////////////////////////////////////////////////      
         // RMIT Google Map Display
         var myRMITLatLng = {lat: {{rmitLat}}, lng: {{ rmitLng }}};
         var RMITmap =  new google.maps.Map(document.getElementById('rmitMap'), {
@@ -138,46 +144,90 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
           var RMITmarker = new google.maps.Marker({
           position: myRMITLatLng,
           map: RMITmap,
-          
-        });
-      
-        // Swinburne Google Map Display
-        var mySwinLatLng = {lat: {{swinburneLat}}, lng: {{ swinburneLng }}};
-        var swinMap =  new google.maps.Map(document.getElementById('swinburneMap'), {
-            center: mySwinLatLng,
-            zoom: 16
-          });
-         var SWINmarker = new google.maps.Marker({
-          position: mySwinLatLng,
-          map: swinMap,
         });
 
-       // Monash Google Map Display
-       var myMonashLatLng = {lat: {{monashLat}}, lng: {{ monashLng }}};
-       var monashMap =  new google.maps.Map(document.getElementById('monashMap'), {
-            center: myMonashLatLng,
+////////////////////////////////////////////////////////////////////////////////////////      
+        // Victoria University Google Map Display
+        var myVicLatLng = {lat: {{vicLat}}, lng: {{ vicLng }}};
+        var vicMap =  new google.maps.Map(document.getElementById('vicMap'), {
+            center: myVicLatLng,
+            zoom: 16
+          });
+         var vicmarker = new google.maps.Marker({
+          position: myVicLatLng,
+          map: vicMap,
+        });
+
+////////////////////////////////////////////////////////////////////////////////////////      
+       // Melbourne University Google Map Display
+       var myMelbLatLng = {lat: {{melbLat}}, lng: {{ melbLng }}};
+       var melbMap =  new google.maps.Map(document.getElementById('melbMap'), {
+            center: myMelbLatLng,
             zoom: 16
           });
           // Displays a red marker on the coordinates
-          var monashMarker = new google.maps.Marker({
-          position: myMonashLatLng,
-          map: monashMap,
+          var melbMarker = new google.maps.Marker({
+          position: myMelbLatLng,
+          map: melbMap,
         });
-    }
-    </script>
+
+////////////////////////////////////////////////////////////////////////////////////////      
+    // Restaurant Markers around the universities
+    {% for location in rows %}
+
+    // Grab all coordinates
+    var point = {lat: {{ location.latitude }}, lng: {{ location.longitude }}};
+
+    // Restaurant markers around RMIT
+    var RMITExtraMarker = new google.maps.Marker({
+    position: point,
+    map: RMITmap,
+    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+    });
+
+    // Restaurant markers around Melbounre University
+    var marker = new google.maps.Marker({
+    position: point,
+    map: melbMap,
+    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+    });
+
+    // Restaurant markers around Victoria University
+    var marker = new google.maps.Marker({
+    position: point,
+    map: vicMap,
+    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+    });
+
+    // Window Information
+    var contentString = '<p>Cafe Location</p>'
+    var infowindow = new google.maps.InfoWindow({
+    content: contentString
+    });
+
+    // Execute something when marker is clicked
+    marker.addListener('click', function() {
+    infowindow.open(RMITmap, RMITExtraMarker);
+    });
+
+  {% endfor %}
+
+}
+
+</script>
     
-<div id="contactus" data-type='swinburne'>
+<div id="contactus" data-type='victoria'>
   <center>
-    <div id="swinburneMap" style="width:60%; height:500px;"></div>
-      <p> Swinburne Content </p>
+    <div id="vicMap" style="width:60%; height:500px;"></div>
+      <p> Vic Content </p>
     <center>
 </div> 
 
 
-<div id="contactus" data-type='monash'>
+<div id="contactus" data-type='melbourne'>
   <center>
-    <div id="monashMap" style="width:60%; height:500px;"></div>
-      <p> Monash Content </p>
+    <div id="melbMap" style="width:60%; height:500px;"></div>
+      <p> melb Content </p>
 
     <center>
 </div> 
@@ -186,6 +236,7 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
 <div id="contactus" data-type='rmit'>
   <center>
     <div id="rmitMap" style="width:60%; height:500px;"></div>
+<button onclick="window.location.href = 'map.html';">Click Here</button>
   <p>This is an example sentence right here As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
 
     <center>
