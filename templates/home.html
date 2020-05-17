@@ -199,16 +199,6 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
     icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
     });
 
-    // Window Information
-    var contentString = '<p>Cafe Location</p>'
-    var infowindow = new google.maps.InfoWindow({
-    content: contentString
-    });
-
-    // Execute something when marker is clicked
-    marker.addListener('click', function() {
-    infowindow.open(RMITmap, RMITExtraMarker);
-    });
 
   {% endfor %}
 
