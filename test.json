@@ -1,0 +1,1793 @@
+{
+    "created_at": "Sun May 17 07:00:45 +0000 2020",
+    "id": 1261914535440441345,
+    "id_str": "1261914535440441345",
+    "text": "RT @tang_guin: white people gonna learn how to pronounce 'X \u00c6 A-12' before they learn how to pronounce 'nguyen'",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "tang_guin",
+                "name": "Thanh",
+                "id": 212032156,
+                "id_str": "212032156",
+                "indices": [
+                    3,
+                    13
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 1067178223337795584,
+        "id_str": "1067178223337795584",
+        "name": "subtle asian dating: distancing edition \ud83e\udd7a\ud83d\udc49\ud83d\udc48",
+        "screen_name": "subtleazndating",
+        "location": "",
+        "description": "600k of the world\u2019s best wingfriends \ud83d\ude33\ud83d\udc98 inadvertent but proud part of the api diaspora internet. \ud83e\udd73 https://t.co/h9dl0BnJF8 \ud83d\udc47\ud83d\udc47\ud83d\udc47",
+        "url": "https://t.co/SqHW6AufTA",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/SqHW6AufTA",
+                        "expanded_url": "https://www.facebook.com/groups/725870897781323/",
+                        "display_url": "facebook.com/groups/7258708\u2026",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": [
+                    {
+                        "url": "https://t.co/h9dl0BnJF8",
+                        "expanded_url": "http://instagram.com/subtleasiandatingofficial",
+                        "display_url": "instagram.com/subtleasiandat\u2026",
+                        "indices": [
+                            99,
+                            122
+                        ]
+                    }
+                ]
+            }
+        },
+        "protected": false,
+        "followers_count": 604,
+        "friends_count": 9,
+        "listed_count": 0,
+        "created_at": "Mon Nov 26 22:08:10 +0000 2018",
+        "favourites_count": 597,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 635,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1067178223337795584/1543962302",
+        "profile_link_color": "EC5D57",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Thu May 07 16:29:54 +0000 2020",
+        "id": 1258433888256434176,
+        "id_str": "1258433888256434176",
+        "text": "white people gonna learn how to pronounce 'X \u00c6 A-12' before they learn how to pronounce 'nguyen'",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 212032156,
+            "id_str": "212032156",
+            "name": "Thanh",
+            "screen_name": "tang_guin",
+            "location": "",
+            "description": "yes fine I'll do it",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 564,
+            "friends_count": 414,
+            "listed_count": 0,
+            "created_at": "Thu Nov 04 23:20:49 +0000 2010",
+            "favourites_count": 25627,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 459,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1102396077234368513/7JDWVaXD_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1102396077234368513/7JDWVaXD_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/212032156/1531407770",
+            "profile_link_color": "FAB81E",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 22080,
+        "favorite_count": 111050,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 22080,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sun May 17 02:04:14 +0000 2020",
+    "id": 1261839917224808451,
+    "id_str": "1261839917224808451",
+    "text": "RT @lexi4prez: jeff bezos set to become the first trillionaire meanwhile 33 million americans just filed for unemployment forcing 27 millio\u2026",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "lexi4prez",
+                "name": "alexis isabel",
+                "id": 443529647,
+                "id_str": "443529647",
+                "indices": [
+                    3,
+                    13
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 1067178223337795584,
+        "id_str": "1067178223337795584",
+        "name": "subtle asian dating: distancing edition \ud83e\udd7a\ud83d\udc49\ud83d\udc48",
+        "screen_name": "subtleazndating",
+        "location": "",
+        "description": "600k of the world\u2019s best wingfriends \ud83d\ude33\ud83d\udc98 inadvertent but proud part of the api diaspora internet. \ud83e\udd73 https://t.co/h9dl0BnJF8 \ud83d\udc47\ud83d\udc47\ud83d\udc47",
+        "url": "https://t.co/SqHW6AufTA",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/SqHW6AufTA",
+                        "expanded_url": "https://www.facebook.com/groups/725870897781323/",
+                        "display_url": "facebook.com/groups/7258708\u2026",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": [
+                    {
+                        "url": "https://t.co/h9dl0BnJF8",
+                        "expanded_url": "http://instagram.com/subtleasiandatingofficial",
+                        "display_url": "instagram.com/subtleasiandat\u2026",
+                        "indices": [
+                            99,
+                            122
+                        ]
+                    }
+                ]
+            }
+        },
+        "protected": false,
+        "followers_count": 604,
+        "friends_count": 9,
+        "listed_count": 0,
+        "created_at": "Mon Nov 26 22:08:10 +0000 2018",
+        "favourites_count": 597,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 635,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1067178223337795584/1543962302",
+        "profile_link_color": "EC5D57",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Wed May 13 22:21:37 +0000 2020",
+        "id": 1260696727717384192,
+        "id_str": "1260696727717384192",
+        "text": "jeff bezos set to become the first trillionaire meanwhile 33 million americans just filed for unemployment forcing\u2026 https://t.co/BKVYwg2L83",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/BKVYwg2L83",
+                    "expanded_url": "https://twitter.com/i/web/status/1260696727717384192",
+                    "display_url": "twitter.com/i/web/status/1\u2026",
+                    "indices": [
+                        116,
+                        139
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 443529647,
+            "id_str": "443529647",
+            "name": "alexis isabel",
+            "screen_name": "lexi4prez",
+            "location": "(she/her)",
+            "description": "chicana, socialist, bsw \u26a2",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 150849,
+            "friends_count": 396,
+            "listed_count": 658,
+            "created_at": "Thu Dec 22 08:15:27 +0000 2011",
+            "favourites_count": 182368,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 31722,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "ACDED6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme3/bg.gif",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme3/bg.gif",
+            "profile_background_tile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1261061600586448898/klhXTye-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1261061600586448898/klhXTye-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/443529647/1586882567",
+            "profile_link_color": "ABB8C2",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "E3E2DE",
+            "profile_text_color": "634047",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 104810,
+        "favorite_count": 480154,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "possibly_sensitive_appealable": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 104810,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sat May 16 05:49:28 +0000 2020",
+    "id": 1261534210520543232,
+    "id_str": "1261534210520543232",
+    "text": "RT @isosteph: i love going to the chinese supermarket and walking out with 1 bag of vegetables and 8 different kinds of instant noodles and\u2026",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "isosteph",
+                "name": "stephanie",
+                "id": 3984270913,
+                "id_str": "3984270913",
+                "indices": [
+                    3,
+                    12
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 1067178223337795584,
+        "id_str": "1067178223337795584",
+        "name": "subtle asian dating: distancing edition \ud83e\udd7a\ud83d\udc49\ud83d\udc48",
+        "screen_name": "subtleazndating",
+        "location": "",
+        "description": "600k of the world\u2019s best wingfriends \ud83d\ude33\ud83d\udc98 inadvertent but proud part of the api diaspora internet. \ud83e\udd73 https://t.co/h9dl0BnJF8 \ud83d\udc47\ud83d\udc47\ud83d\udc47",
+        "url": "https://t.co/SqHW6AufTA",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/SqHW6AufTA",
+                        "expanded_url": "https://www.facebook.com/groups/725870897781323/",
+                        "display_url": "facebook.com/groups/7258708\u2026",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": [
+                    {
+                        "url": "https://t.co/h9dl0BnJF8",
+                        "expanded_url": "http://instagram.com/subtleasiandatingofficial",
+                        "display_url": "instagram.com/subtleasiandat\u2026",
+                        "indices": [
+                            99,
+                            122
+                        ]
+                    }
+                ]
+            }
+        },
+        "protected": false,
+        "followers_count": 604,
+        "friends_count": 9,
+        "listed_count": 0,
+        "created_at": "Mon Nov 26 22:08:10 +0000 2018",
+        "favourites_count": 597,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 635,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1067178223337795584/1543962302",
+        "profile_link_color": "EC5D57",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Fri May 15 21:07:53 +0000 2020",
+        "id": 1261402949160275968,
+        "id_str": "1261402949160275968",
+        "text": "i love going to the chinese supermarket and walking out with 1 bag of vegetables and 8 different kinds of instant n\u2026 https://t.co/tAOlKo2GJN",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/tAOlKo2GJN",
+                    "expanded_url": "https://twitter.com/i/web/status/1261402949160275968",
+                    "display_url": "twitter.com/i/web/status/1\u2026",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 3984270913,
+            "id_str": "3984270913",
+            "name": "stephanie",
+            "screen_name": "isosteph",
+            "location": "sf",
+            "description": "ongoing core dump",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 23068,
+            "friends_count": 690,
+            "listed_count": 137,
+            "created_at": "Thu Oct 22 21:26:43 +0000 2015",
+            "favourites_count": 15713,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 5829,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1155989664563511296/UBlye7DW_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1155989664563511296/UBlye7DW_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/3984270913/1560491912",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 12,
+        "favorite_count": 275,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 12,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sat May 16 03:30:09 +0000 2020",
+    "id": 1261499151830958082,
+    "id_str": "1261499151830958082",
+    "text": "The wearables market is projected to be worth $60bn by 2025. Read how RMIT designer Leah Heiss is making jewellery\u2026 https://t.co/mdKbqDXknp",
+    "truncated": true,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+            {
+                "url": "https://t.co/mdKbqDXknp",
+                "expanded_url": "https://twitter.com/i/web/status/1261499151830958082",
+                "display_url": "twitter.com/i/web/status/1\u2026",
+                "indices": [
+                    116,
+                    139
+                ]
+            }
+        ]
+    },
+    "source": "<a href=\"https://www.hootsuite.com\" rel=\"nofollow\">Hootsuite Inc.</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 6778812,
+        "id_str": "6778812",
+        "name": "RMIT University",
+        "screen_name": "RMIT",
+        "location": "Melbourne, Australia",
+        "description": "RMIT is a global university of technology, design and enterprise.\n\nOnline M-F 8:30am-5:30pm. CRICOS 00122A",
+        "url": "https://t.co/pfFGpX1G4t",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/pfFGpX1G4t",
+                        "expanded_url": "https://www.rmit.edu.au",
+                        "display_url": "rmit.edu.au",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 55063,
+        "friends_count": 1566,
+        "listed_count": 742,
+        "created_at": "Wed Jun 13 00:16:10 +0000 2007",
+        "favourites_count": 2096,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 12054,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "FFFFFF",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/887519039106334720/1s8Lww6v_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/887519039106334720/1s8Lww6v_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/6778812/1534208570",
+        "profile_link_color": "DC291E",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "FFFFFF",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 3,
+    "favorite_count": 7,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "possibly_sensitive_appealable": false,
+    "lang": "en"
+}{
+    "created_at": "Fri May 15 06:54:50 +0000 2020",
+    "id": 1261188271079477248,
+    "id_str": "1261188271079477248",
+    "text": "RT @SportAusHoF: 2020 National Sport Integrity Forum:\nReturn to Sport: Risks, Rewards, Opportunities and Challenges.\n\n@lynnemanderson, @DrD\u2026",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "SportAusHoF",
+                "name": "Sport Australia Hall of Fame",
+                "id": 1649396366,
+                "id_str": "1649396366",
+                "indices": [
+                    3,
+                    15
+                ]
+            },
+            {
+                "screen_name": "lynnemanderson",
+                "name": "Lynne Anderson",
+                "id": 2959037221,
+                "id_str": "2959037221",
+                "indices": [
+                    118,
+                    133
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 142897820,
+        "id_str": "142897820",
+        "name": "Victoria University",
+        "screen_name": "victoriauninews",
+        "location": "Melbourne, Australia",
+        "description": "Delivering The New Way To Do Uni through our revolutionary VU Block Model. Top 2% of universities worldwide.  CRICOS 00124K (Melb), 02475D (Syd), RTO 3113.",
+        "url": "https://t.co/XEphauc5ZY",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/XEphauc5ZY",
+                        "expanded_url": "https://www.vu.edu.au/",
+                        "display_url": "vu.edu.au",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 18240,
+        "friends_count": 292,
+        "listed_count": 286,
+        "created_at": "Wed May 12 01:38:52 +0000 2010",
+        "favourites_count": 3710,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 14603,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "2D4F8E",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1260780562244988928/3S8R8cIn_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1260780562244988928/3S8R8cIn_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/142897820/1556863107",
+        "profile_link_color": "0079C1",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "A6ACB3",
+        "profile_text_color": "1C1F23",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Fri May 15 06:50:02 +0000 2020",
+        "id": 1261187063002443776,
+        "id_str": "1261187063002443776",
+        "text": "2020 National Sport Integrity Forum:\nReturn to Sport: Risks, Rewards, Opportunities and Challenges.\u2026 https://t.co/t7Gj1XDS4n",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/t7Gj1XDS4n",
+                    "expanded_url": "https://twitter.com/i/web/status/1261187063002443776",
+                    "display_url": "twitter.com/i/web/status/1\u2026",
+                    "indices": [
+                        101,
+                        124
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 1649396366,
+            "id_str": "1649396366",
+            "name": "Sport Australia Hall of Fame",
+            "screen_name": "SportAusHoF",
+            "location": "Melbourne, Australia",
+            "description": "Preserving and celebrating the history of Australian Sport. Induction into The Sport Australia Hall of Fame is the highest national sporting honour. #SAHOF",
+            "url": "https://t.co/bD3HbnO9C6",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/bD3HbnO9C6",
+                            "expanded_url": "http://www.sahof.org.au/",
+                            "display_url": "sahof.org.au",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2209,
+            "friends_count": 675,
+            "listed_count": 11,
+            "created_at": "Tue Aug 06 03:51:28 +0000 2013",
+            "favourites_count": 2915,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 2623,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "080808",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/905681388938027011/stb0zQgE_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/905681388938027011/stb0zQgE_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/1649396366/1571363487",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 9,
+        "favorite_count": 25,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "possibly_sensitive_appealable": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 9,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sun May 17 07:00:45 +0000 2020",
+    "id": 1261914535440441345,
+    "id_str": "1261914535440441345",
+    "text": "RT @tang_guin: white people gonna learn how to pronounce 'X \u00c6 A-12' before they learn how to pronounce 'nguyen'",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "tang_guin",
+                "name": "Thanh",
+                "id": 212032156,
+                "id_str": "212032156",
+                "indices": [
+                    3,
+                    13
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 1067178223337795584,
+        "id_str": "1067178223337795584",
+        "name": "subtle asian dating: distancing edition \ud83e\udd7a\ud83d\udc49\ud83d\udc48",
+        "screen_name": "subtleazndating",
+        "location": "",
+        "description": "600k of the world\u2019s best wingfriends \ud83d\ude33\ud83d\udc98 inadvertent but proud part of the api diaspora internet. \ud83e\udd73 https://t.co/h9dl0BnJF8 \ud83d\udc47\ud83d\udc47\ud83d\udc47",
+        "url": "https://t.co/SqHW6AufTA",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/SqHW6AufTA",
+                        "expanded_url": "https://www.facebook.com/groups/725870897781323/",
+                        "display_url": "facebook.com/groups/7258708\u2026",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": [
+                    {
+                        "url": "https://t.co/h9dl0BnJF8",
+                        "expanded_url": "http://instagram.com/subtleasiandatingofficial",
+                        "display_url": "instagram.com/subtleasiandat\u2026",
+                        "indices": [
+                            99,
+                            122
+                        ]
+                    }
+                ]
+            }
+        },
+        "protected": false,
+        "followers_count": 604,
+        "friends_count": 9,
+        "listed_count": 0,
+        "created_at": "Mon Nov 26 22:08:10 +0000 2018",
+        "favourites_count": 597,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 635,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1067178223337795584/1543962302",
+        "profile_link_color": "EC5D57",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Thu May 07 16:29:54 +0000 2020",
+        "id": 1258433888256434176,
+        "id_str": "1258433888256434176",
+        "text": "white people gonna learn how to pronounce 'X \u00c6 A-12' before they learn how to pronounce 'nguyen'",
+        "truncated": false,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 212032156,
+            "id_str": "212032156",
+            "name": "Thanh",
+            "screen_name": "tang_guin",
+            "location": "",
+            "description": "yes fine I'll do it",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 564,
+            "friends_count": 414,
+            "listed_count": 0,
+            "created_at": "Thu Nov 04 23:20:49 +0000 2010",
+            "favourites_count": 25627,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 459,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "000000",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1102396077234368513/7JDWVaXD_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1102396077234368513/7JDWVaXD_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/212032156/1531407770",
+            "profile_link_color": "FAB81E",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "000000",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 22080,
+        "favorite_count": 111050,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 22080,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sun May 17 02:04:14 +0000 2020",
+    "id": 1261839917224808451,
+    "id_str": "1261839917224808451",
+    "text": "RT @lexi4prez: jeff bezos set to become the first trillionaire meanwhile 33 million americans just filed for unemployment forcing 27 millio\u2026",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "lexi4prez",
+                "name": "alexis isabel",
+                "id": 443529647,
+                "id_str": "443529647",
+                "indices": [
+                    3,
+                    13
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 1067178223337795584,
+        "id_str": "1067178223337795584",
+        "name": "subtle asian dating: distancing edition \ud83e\udd7a\ud83d\udc49\ud83d\udc48",
+        "screen_name": "subtleazndating",
+        "location": "",
+        "description": "600k of the world\u2019s best wingfriends \ud83d\ude33\ud83d\udc98 inadvertent but proud part of the api diaspora internet. \ud83e\udd73 https://t.co/h9dl0BnJF8 \ud83d\udc47\ud83d\udc47\ud83d\udc47",
+        "url": "https://t.co/SqHW6AufTA",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/SqHW6AufTA",
+                        "expanded_url": "https://www.facebook.com/groups/725870897781323/",
+                        "display_url": "facebook.com/groups/7258708\u2026",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": [
+                    {
+                        "url": "https://t.co/h9dl0BnJF8",
+                        "expanded_url": "http://instagram.com/subtleasiandatingofficial",
+                        "display_url": "instagram.com/subtleasiandat\u2026",
+                        "indices": [
+                            99,
+                            122
+                        ]
+                    }
+                ]
+            }
+        },
+        "protected": false,
+        "followers_count": 604,
+        "friends_count": 9,
+        "listed_count": 0,
+        "created_at": "Mon Nov 26 22:08:10 +0000 2018",
+        "favourites_count": 597,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 635,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1067178223337795584/1543962302",
+        "profile_link_color": "EC5D57",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Wed May 13 22:21:37 +0000 2020",
+        "id": 1260696727717384192,
+        "id_str": "1260696727717384192",
+        "text": "jeff bezos set to become the first trillionaire meanwhile 33 million americans just filed for unemployment forcing\u2026 https://t.co/BKVYwg2L83",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/BKVYwg2L83",
+                    "expanded_url": "https://twitter.com/i/web/status/1260696727717384192",
+                    "display_url": "twitter.com/i/web/status/1\u2026",
+                    "indices": [
+                        116,
+                        139
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 443529647,
+            "id_str": "443529647",
+            "name": "alexis isabel",
+            "screen_name": "lexi4prez",
+            "location": "(she/her)",
+            "description": "chicana, socialist, bsw \u26a2",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 150850,
+            "friends_count": 396,
+            "listed_count": 658,
+            "created_at": "Thu Dec 22 08:15:27 +0000 2011",
+            "favourites_count": 182368,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": true,
+            "statuses_count": 31722,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "ACDED6",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme3/bg.gif",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme3/bg.gif",
+            "profile_background_tile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1261061600586448898/klhXTye-_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1261061600586448898/klhXTye-_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/443529647/1586882567",
+            "profile_link_color": "ABB8C2",
+            "profile_sidebar_border_color": "FFFFFF",
+            "profile_sidebar_fill_color": "E3E2DE",
+            "profile_text_color": "634047",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "regular"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 104810,
+        "favorite_count": 480154,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "possibly_sensitive_appealable": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 104810,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sat May 16 05:49:28 +0000 2020",
+    "id": 1261534210520543232,
+    "id_str": "1261534210520543232",
+    "text": "RT @isosteph: i love going to the chinese supermarket and walking out with 1 bag of vegetables and 8 different kinds of instant noodles and\u2026",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "isosteph",
+                "name": "stephanie",
+                "id": 3984270913,
+                "id_str": "3984270913",
+                "indices": [
+                    3,
+                    12
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 1067178223337795584,
+        "id_str": "1067178223337795584",
+        "name": "subtle asian dating: distancing edition \ud83e\udd7a\ud83d\udc49\ud83d\udc48",
+        "screen_name": "subtleazndating",
+        "location": "",
+        "description": "600k of the world\u2019s best wingfriends \ud83d\ude33\ud83d\udc98 inadvertent but proud part of the api diaspora internet. \ud83e\udd73 https://t.co/h9dl0BnJF8 \ud83d\udc47\ud83d\udc47\ud83d\udc47",
+        "url": "https://t.co/SqHW6AufTA",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/SqHW6AufTA",
+                        "expanded_url": "https://www.facebook.com/groups/725870897781323/",
+                        "display_url": "facebook.com/groups/7258708\u2026",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": [
+                    {
+                        "url": "https://t.co/h9dl0BnJF8",
+                        "expanded_url": "http://instagram.com/subtleasiandatingofficial",
+                        "display_url": "instagram.com/subtleasiandat\u2026",
+                        "indices": [
+                            99,
+                            122
+                        ]
+                    }
+                ]
+            }
+        },
+        "protected": false,
+        "followers_count": 604,
+        "friends_count": 9,
+        "listed_count": 0,
+        "created_at": "Mon Nov 26 22:08:10 +0000 2018",
+        "favourites_count": 597,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 635,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1070081489398722560/2YWu0kNt_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1067178223337795584/1543962302",
+        "profile_link_color": "EC5D57",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Fri May 15 21:07:53 +0000 2020",
+        "id": 1261402949160275968,
+        "id_str": "1261402949160275968",
+        "text": "i love going to the chinese supermarket and walking out with 1 bag of vegetables and 8 different kinds of instant n\u2026 https://t.co/tAOlKo2GJN",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/tAOlKo2GJN",
+                    "expanded_url": "https://twitter.com/i/web/status/1261402949160275968",
+                    "display_url": "twitter.com/i/web/status/1\u2026",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 3984270913,
+            "id_str": "3984270913",
+            "name": "stephanie",
+            "screen_name": "isosteph",
+            "location": "sf",
+            "description": "ongoing core dump",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 23068,
+            "friends_count": 690,
+            "listed_count": 137,
+            "created_at": "Thu Oct 22 21:26:43 +0000 2015",
+            "favourites_count": 15713,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 5829,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1155989664563511296/UBlye7DW_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1155989664563511296/UBlye7DW_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/3984270913/1560491912",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 12,
+        "favorite_count": 275,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 12,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}{
+    "created_at": "Sat May 16 03:30:09 +0000 2020",
+    "id": 1261499151830958082,
+    "id_str": "1261499151830958082",
+    "text": "The wearables market is projected to be worth $60bn by 2025. Read how RMIT designer Leah Heiss is making jewellery\u2026 https://t.co/mdKbqDXknp",
+    "truncated": true,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [
+            {
+                "url": "https://t.co/mdKbqDXknp",
+                "expanded_url": "https://twitter.com/i/web/status/1261499151830958082",
+                "display_url": "twitter.com/i/web/status/1\u2026",
+                "indices": [
+                    116,
+                    139
+                ]
+            }
+        ]
+    },
+    "source": "<a href=\"https://www.hootsuite.com\" rel=\"nofollow\">Hootsuite Inc.</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 6778812,
+        "id_str": "6778812",
+        "name": "RMIT University",
+        "screen_name": "RMIT",
+        "location": "Melbourne, Australia",
+        "description": "RMIT is a global university of technology, design and enterprise.\n\nOnline M-F 8:30am-5:30pm. CRICOS 00122A",
+        "url": "https://t.co/pfFGpX1G4t",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/pfFGpX1G4t",
+                        "expanded_url": "https://www.rmit.edu.au",
+                        "display_url": "rmit.edu.au",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 55063,
+        "friends_count": 1566,
+        "listed_count": 742,
+        "created_at": "Wed Jun 13 00:16:10 +0000 2007",
+        "favourites_count": 2096,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": true,
+        "verified": true,
+        "statuses_count": 12054,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "FFFFFF",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/887519039106334720/1s8Lww6v_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/887519039106334720/1s8Lww6v_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/6778812/1534208570",
+        "profile_link_color": "DC291E",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "FFFFFF",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 3,
+    "favorite_count": 7,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "possibly_sensitive_appealable": false,
+    "lang": "en"
+}{
+    "created_at": "Fri May 15 06:54:50 +0000 2020",
+    "id": 1261188271079477248,
+    "id_str": "1261188271079477248",
+    "text": "RT @SportAusHoF: 2020 National Sport Integrity Forum:\nReturn to Sport: Risks, Rewards, Opportunities and Challenges.\n\n@lynnemanderson, @DrD\u2026",
+    "truncated": false,
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [
+            {
+                "screen_name": "SportAusHoF",
+                "name": "Sport Australia Hall of Fame",
+                "id": 1649396366,
+                "id_str": "1649396366",
+                "indices": [
+                    3,
+                    15
+                ]
+            },
+            {
+                "screen_name": "lynnemanderson",
+                "name": "Lynne Anderson",
+                "id": 2959037221,
+                "id_str": "2959037221",
+                "indices": [
+                    118,
+                    133
+                ]
+            }
+        ],
+        "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 142897820,
+        "id_str": "142897820",
+        "name": "Victoria University",
+        "screen_name": "victoriauninews",
+        "location": "Melbourne, Australia",
+        "description": "Delivering The New Way To Do Uni through our revolutionary VU Block Model. Top 2% of universities worldwide.  CRICOS 00124K (Melb), 02475D (Syd), RTO 3113.",
+        "url": "https://t.co/XEphauc5ZY",
+        "entities": {
+            "url": {
+                "urls": [
+                    {
+                        "url": "https://t.co/XEphauc5ZY",
+                        "expanded_url": "https://www.vu.edu.au/",
+                        "display_url": "vu.edu.au",
+                        "indices": [
+                            0,
+                            23
+                        ]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 18240,
+        "friends_count": 292,
+        "listed_count": 286,
+        "created_at": "Wed May 12 01:38:52 +0000 2010",
+        "favourites_count": 3710,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 14603,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "2D4F8E",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1260780562244988928/3S8R8cIn_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1260780562244988928/3S8R8cIn_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/142897820/1556863107",
+        "profile_link_color": "0079C1",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "A6ACB3",
+        "profile_text_color": "1C1F23",
+        "profile_use_background_image": true,
+        "has_extended_profile": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "retweeted_status": {
+        "created_at": "Fri May 15 06:50:02 +0000 2020",
+        "id": 1261187063002443776,
+        "id_str": "1261187063002443776",
+        "text": "2020 National Sport Integrity Forum:\nReturn to Sport: Risks, Rewards, Opportunities and Challenges.\u2026 https://t.co/t7Gj1XDS4n",
+        "truncated": true,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/t7Gj1XDS4n",
+                    "expanded_url": "https://twitter.com/i/web/status/1261187063002443776",
+                    "display_url": "twitter.com/i/web/status/1\u2026",
+                    "indices": [
+                        101,
+                        124
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 1649396366,
+            "id_str": "1649396366",
+            "name": "Sport Australia Hall of Fame",
+            "screen_name": "SportAusHoF",
+            "location": "Melbourne, Australia",
+            "description": "Preserving and celebrating the history of Australian Sport. Induction into The Sport Australia Hall of Fame is the highest national sporting honour. #SAHOF",
+            "url": "https://t.co/bD3HbnO9C6",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "https://t.co/bD3HbnO9C6",
+                            "expanded_url": "http://www.sahof.org.au/",
+                            "display_url": "sahof.org.au",
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2209,
+            "friends_count": 675,
+            "listed_count": 11,
+            "created_at": "Tue Aug 06 03:51:28 +0000 2013",
+            "favourites_count": 2915,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 2623,
+            "lang": null,
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "080808",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/905681388938027011/stb0zQgE_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/905681388938027011/stb0zQgE_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/1649396366/1571363487",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "000000",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": false,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 9,
+        "favorite_count": 25,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "possibly_sensitive_appealable": false,
+        "lang": "en"
+    },
+    "is_quote_status": false,
+    "retweet_count": 9,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+}

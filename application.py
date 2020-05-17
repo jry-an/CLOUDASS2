@@ -50,8 +50,8 @@ class TwitterClient():
         for tweet in Cursor(self.twitter_client.home_timeline, id=self.twitter_user).items(num_tweets):
             recent_tweets.append(tweet)
 
-            # with open('test.json', 'a', encoding='utf8') as file:
-            #     json.dump(tweet._json, file, indent = 4)
+            with open('test.json', 'a', encoding='utf8') as file:
+                json.dump(tweet._json, file, indent = 4)
 
         return recent_tweets
 
