@@ -17,7 +17,7 @@ app = Flask(__name__)
 class News(ndb.Model):
     title = ndb.StringProperty(indexed=False)
     content = ndb.StringProperty(indexed=False)
-    time = ndb.DateTimeProperty(indexed=False)
+    time = ndb.DateTimeProperty(auto_now_add=True)
 
 
 # Reference the current module which is application.py
@@ -44,7 +44,6 @@ def new_news(title, content):
     new = News()
     new.title = title.decode('utf-8')
     new.content = content.decode('utf-8')
-    news.content = datetime.datetime.now()
     new.put()
 
 
@@ -52,7 +51,8 @@ def new_news(title, content):
 @app.route("/", methods=['GET'])
 def home():
     # Store the current access time in Datastore.
-    query = News.query()
+    query = News.query().order(-News.time)
+    # gets the first 10 posts
     news_list = query.fetch(10)
 
     return render_template('home.html', news_list=news_list, universities=universities)
@@ -89,7 +89,7 @@ def news_post():
     # post new news to datastore entity
     new_news(news_title, news_content)
 
-    return redirect('/')
+    return redirect(url_for('home'), code=303)
 
 
 if __name__ == "__main__":
