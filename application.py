@@ -47,13 +47,6 @@ def dataFlow(argv=None):
                 help=('Output local filename'))
             args, pipeline_args = parser.parse_known_args(argv)
             options = PipelineOptions(pipeline_args)
-            options.view_as(StandardOptions).runner = 'DataflowRunner'
-            google_cloud_options = options.view_as(GoogleCloudOptions)
-            google_cloud_options.project = 'cloudcoursedelivery'
-            google_cloud_options.job_name = 'myjob'
-            google_cloud_options.staging_location = 'gs://tweets-au-bucket'
-            google_cloud_options.temp_location = 'gs://aarontempbucket'
-            google_cloud_options.region = 'australia-southeast1'
             options.view_as(SetupOptions).save_main_session = True
 
             # Streaming python
