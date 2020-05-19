@@ -6,18 +6,6 @@
 {% block body %}
 
 <div class="BookMark">
-<h2>NEWS</h2>
-     {%  for news in news_list %}
-         <nav>
-  <ul>
-  <li>{{ news.title }}
-      <ul> {{ news.content }}</ul>
-      </li>
-  </ul>
-  {% endfor %}
-    </nav>
-<button type="button" href='/news'><a href="/news" >Create New Post</a></button>
-
   <h1>Choose a University</h1>
   <!-- for every object in the universities tuple produces the code below -->
     {% for school in universities %}
@@ -28,7 +16,7 @@
 
 
 <div class="Consulation">
-<h2>Consulation<h2>
+<h2>Consulation</h2>
   <nav>
     <ul>
       <li><a href="#">Bookmark1</a></li>
@@ -39,7 +27,7 @@
   </div>
 
 <div class="CourseTrends">
-<h2>CourseTrends<h2>
+<h2>CourseTrends</h2>
   <nav>
     <ul>
       <li><a href="#">Bookmark1</a></li>
@@ -52,14 +40,18 @@
   </div>
 
   <div class="UniversityNews">
-  <h2>University News<h2>
-  <nav>
-    <ul>
-      <li><a href="#">Bookmark1</a></li>
-      <li><a href="#">Bookmark2</a></li>
-      <li><a href="#">Bookmark3</a></li>
-    </ul>
-  </nav>
+  <h2>University News</h2>
+     {%  for news in news_list %}
+         <nav>
+  <ul>
+  <li>{{ news.title }}
+      <ul> {{ news.content }}</ul>
+      </li>
+  </ul>
+  {% endfor %}
+    </nav>
+<button type="button" href='/news'><a href="/news" >Create New Post</a></button>
+
   </div>
 
 
@@ -69,7 +61,7 @@
   <button type="submit">Search </button>
   
 </form>
-<h1>Content> <h1>
+<h1>Content> </h1>
 <p>This is an example sentence right here As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
 As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
 As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
