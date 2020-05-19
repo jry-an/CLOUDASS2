@@ -6,15 +6,17 @@
 {% block body %}
 
 <div class="BookMark">
-<h2>BookMark<h2>
-  <nav>
-    <ul>
-      <li><a href="#">Bookmark1</a></li>
-      <li><a href="#">Bookmark2</a></li>
-      <li><a href="#">Bookmark3</a></li>
-    </ul>
-  </nav>
-
+<h2>NEWS</h2>
+     {%  for news in news_list %}
+         <nav>
+  <ul>
+  <li>{{ news.title }}
+      <ul> {{ news.content }}</ul>
+      </li>
+  </ul>
+  {% endfor %}
+    </nav>
+    <button type="button" href='/news'><a href="/news">Create New Post</a></button>
   <h1>Choose a University</h1>
   <!-- for every object in the universities tuple produces the code below -->
     {% for school in universities %}
@@ -22,15 +24,7 @@
     {% endfor %}
   </div>
 
-  <div>
-    <h1>NEWS</h1>
-  {%  for news in news_list %}
-  <ul>
-  <li>{{ news.title }}</li>
-  <li>{{ news.content }}</li>
-  </ul>
-  {% endfor %}
-  </div>
+
 
 <div class="Consulation">
 <h2>Consulation<h2>

@@ -1,14 +1,26 @@
+from google.appengine.ext import vendor
+vendor.add('lib')
+import six
+reload(six)
 from flask import Flask, render_template, request, url_for, redirect
 from google.appengine.ext import ndb
+# from google.cloud import pubsub_v1
+import json
+import os
+import datetime
+
+app = Flask(__name__)
+
+# publisher = pubsub_v1.PublisherClient()
 
 
 class News(ndb.Model):
     title = ndb.StringProperty(indexed=False)
     content = ndb.StringProperty(indexed=False)
+    time = ndb.DateTimeProperty(indexed=False)
 
 
 # Reference the current module which is application.py
-app = Flask(__name__)
 
 # example information to test map API, I will update this with Google cloud MYSQL
 class School:
@@ -32,6 +44,7 @@ def new_news(title, content):
     new = News()
     new.title = title.decode('utf-8')
     new.content = content.decode('utf-8')
+    news.content = datetime.datetime.now()
     new.put()
 
 
@@ -41,10 +54,25 @@ def home():
     # Store the current access time in Datastore.
     query = News.query()
     news_list = query.fetch(10)
+
     return render_template('home.html', news_list=news_list, universities=universities)
 
 # Anything following the / is to be passed into the function below
 @app.route("/<school_code>")
+# Using the passed in variable school_code into the function
+def show_school(school_code):
+
+    # Using school_code to lookup in the uni_by_key dictionary
+    school = uni_by_key.get(school_code)
+
+    # If Found
+    if school:
+        return render_template('map.html', school=school)
+
+    # If not found (Page not found)
+    # else:
+    #     abort(404)
+
 
 # render news page to enter a new post
 @app.route('/news')
@@ -61,20 +89,8 @@ def news_post():
     # post new news to datastore entity
     new_news(news_title, news_content)
 
-    return render_template('home.html')
-# Using the passed in variable school_code into the function
-def show_school(school_code):
+    return redirect('/')
 
-    # Using school_code to lookup in the uni_by_key dictionary
-    school = uni_by_key.get(school_code)
-
-    # If Found
-    if school:
-        return render_template('map.html', school=school)
-
-    # If not found (Page not found)
-    else:
-        abort(404)
 
 if __name__ == "__main__":
     # If we have any errors it'll pop up on the website

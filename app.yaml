@@ -3,6 +3,10 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+env_variables:
+  PUBSUB_TOPIC: news
+  PUBSUB_VERIFICATION_TOKEN: 1234abc
+
 # [START handlers]
 handlers:
 - url: /.*
@@ -15,4 +19,6 @@ libraries:
   version: latest
 - name: setuptools
   version: "36.6.0"
+- name: grpcio
+  version: latest
 # [END libraries]
