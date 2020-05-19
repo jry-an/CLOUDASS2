@@ -13,8 +13,6 @@
     {% endfor %}
   </div>
 
-
-
 <div class="Consulation">
 <h2>Consulation</h2>
   <nav>
@@ -44,8 +42,8 @@
      {%  for news in news_list %}
          <nav>
   <ul>
-  <li>{{ news.title }}
-      <ul> {{ news.content }}</ul>
+  <li>Title: {{ news.title }}
+      <ul>Post: {{ news.content }}</ul>
       </li>
   </ul>
   {% endfor %}
