@@ -1,0 +1,15 @@
+et_xmlfile
+Flask
+Flask-Login
+Flask-MySQLdb
+Flask-SQLAlchemy
+Hypercorn
+Jinja2
+MarkupSafe
+pybloom_live
+PyMySQL
+PySocks
+Quart
+SQLAlchemy
+Unidecode
+Werkzeug
