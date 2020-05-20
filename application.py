@@ -1,12 +1,11 @@
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, request, redirect, url_for
-from google.cloud import datastore
 
 import BigQueryClass
 import MySQLClass
+import NewsClass
 # Cohesive classes
 import twitterAPI
-import datetime
 
 # Pub/Sub classes
 # from publish import publish_messages
@@ -18,27 +17,14 @@ import datetime
 # Class Clients
 uniClass = MySQLClass.universities()
 locationClass = BigQueryClass.Food_Coordinations()
-datastore_client = datastore.Client()
-kind = 'News'
-
-
-def new_news(title, content):
-    entity = datastore.Entity(key=datastore_client.key(kind))
-    entity['title'] = title
-    entity['content'] = content
-    entity['time'] = datetime.datetime.now()
-    datastore_client.put(entity)
-
+newsClass = NewsClass
 
 app = Flask(__name__)
 
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    query = datastore_client.query(kind=kind)
-    query.order = ['-time']
-    news_list = list(query.fetch())
-    return render_template('home.html', universities=uniClass.uni, rows=locationClass.locations, news_list=news_list)
+    return render_template('home.html', universities=uniClass.uni, rows=locationClass.locations, news_list=newsClass.query())
 
 
 # render news page to enter a new post
@@ -52,10 +38,8 @@ def news_post():
     # get title and content from html
     news_title = request.form['title']
     news_content = request.form['content']
-
     # post new news to datastore entity
-    new_news(news_title, news_content)
-
+    newsClass.new_news(news_title, news_content)
     return redirect(url_for('index'), code=303)
 
 if __name__ == "__main__":
