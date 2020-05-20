@@ -3,9 +3,8 @@ from tweepy import Cursor
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-from app import twitterCredentials
-
-
+import twitterCredentials
+import json
 # TWITTER CLIENT
 class TwitterClient():
 
