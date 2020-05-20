@@ -10,3 +10,8 @@ class Food_Coordinations:
         query = """SELECT latitude, longitude, MIN(Block_ID) FROM `cloudcoursedelivery.food.food_location` GROUP BY latitude, longitude"""
         locationExecute = client.query(query)  # Make an API request
         locations = [dict(row) for row in locationExecute]
+
+class Tweet_List:
+        tweet_query = """SELECT payloadString FROM `cloudcoursedelivery.bqTweets.tweeting_error_records`"""
+        t_listExecute = client.query(tweet_query)  # Make an API request
+        twitter_list = [dict(row) for row in t_listExecute]

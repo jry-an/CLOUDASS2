@@ -15,32 +15,15 @@ class TwitterClient():
 
         self.twitter_user = twitter_user
 
-    def get_user_timeline_tweets(self, num_tweets):
-        tweets = []
-        for tweet in Cursor(self.twitter_client.user_timeline, id=self.twitter_user).items(num_tweets):
-            tweets.append(tweet)
-        return tweets
-
-    def get_friendlist(self, num_friends):
-        friends_list = []
-        for friend in Cursor(self.twitter_client.friends, id=self.twitter_user).items(num_friends):
-            friend_list.append(friend)
-        return friend_list
-
-    def get_home_timeline_tweets(self, num_tweets):
-        home_timeline_tweets = []
-        for tweet in Cursor(self.twitter_client.home_timeline, id=self.twitter_user).items(num_tweets):
-            home_timeline_tweets.append(tweet)
-        return home_timeline_tweets
-
     def get_most_recent_tweets(self, num_tweets):
         recent_tweets = []
-        for tweet in Cursor(self.twitter_client.home_timeline, id=self.twitter_user).items(num_tweets):
-            recent_tweets.append(tweet)
+        new_search = '#university -filter:retweets'
+        tweets = Cursor(self.twitter_client.home_timeline, q=new_search, id=self.twitter_user, exclude_replies=True).items(num_tweets)
+        recent_tweets = [[tweet.created_at, tweet.user.screen_name, tweet.text] for tweet in tweets]
 
-            # with open('test.json', 'a', encoding='utf8') as file:
-            #     json.dump(tweet._json, file, indent = 4)
 
+        # with open('test.json', 'a', encoding='utf8') as file:
+        #         json.dump(recent_tweets._json, file, indent = 4)
         return recent_tweets
 
 # TWITTER AUTHENTICATOR
