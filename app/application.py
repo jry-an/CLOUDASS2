@@ -1,11 +1,8 @@
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, request, redirect, url_for
 
-import BigQueryClass
-import MySQLClass
-import NewsClass
 # Cohesive classes
-import twitterAPI
+from app import twitterAPI, NewsClass, MySQLClass, BigQueryClass
 
 # Pub/Sub classes
 # from publish import publish_messages
