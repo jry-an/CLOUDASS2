@@ -16,7 +16,7 @@ def publish_messages(project_id, topic_name, twitter_data):
 
     for n in twitter_data:
         
-        data = u"Message number: {}".format(n)
+        data = u"{}".format(n)
         # Data must be a bytestring
         data = data.encode("utf-8")
         # When you publish a message, the client returns a future.

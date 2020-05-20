@@ -5,6 +5,7 @@ import mysql.connector
 import os
 from google.cloud import bigquery
 from google.cloud import pubsub_v1
+import json
 
 # Cohesive classes
 import twitterAPI
@@ -32,37 +33,6 @@ locationClass = BigQueryClass.Food_Coordinations()
 
 app = Flask(__name__)
 
-# DataFlow (incomplete)
-def dataFlow(argv=None):
-        sys.setrecursionlimit(2000)
-        with app.test_request_context():
-            """Build and run the pipeline."""
-            parser = argparse.ArgumentParser()
-            parser.add_argument(
-                '--topic',
-                type=str,
-                help='Pub/Sub topic to read from')
-            parser.add_argument(
-                '--output',
-                help=('Output local filename'))
-            args, pipeline_args = parser.parse_known_args(argv)
-            options = PipelineOptions(pipeline_args)
-            options.view_as(SetupOptions).save_main_session = True
-
-            # Streaming python
-            options.view_as(StandardOptions).streaming = True
-
-            # P constructs the pipeline
-            p = beam.Pipeline(options=options)
-            (p  | 'Read from PubSub' >> beam.io.ReadFromPubSub(topic=args.topic,
-                    id_label="MESSAGE_ID")
-                | 'Write to file' >> beam.io.WriteToText(args.output)
-            )
-
-            result = p.run()
-            # Important for streaming, running it forever until its stopped
-            result.wait_until_finish()
-    
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -73,23 +43,26 @@ def index():
 if __name__ == "__main__":
     twitter_data = []
 
+    # # RMIT
     # Reference to twitter class
-    twitter_client = twitterAPI.TwitterClient('RMIT')
+    twitter_clientRMIT = twitterAPI.TwitterClient('RMIT')
     # Reference to specified format
-    resultArray = twitter_client.get_most_recent_tweets(5)
-
+    # RMITTweets = twitter_clientRMIT.get_most_recent_tweets(10)
+    
     # Put Json Results into array for Inserting into BigQuery
-    for item in resultArray:
-        twitter_data.append(item.text)
-    # print(valuable_data)
+    for item in RMITTweets:
+        twitter_data.append(item.created_at)
+        twitter_data.append(item.user.description)
+        twitter_data.append(item.user.screen_name)
+
+    # print(twitter_data)
 
     # Publish real-time twitter messages
     publish_messages('cloudcoursedelivery', 'tweets', twitter_data)
     # Use Pipeline to read from pub messages and output to text file
-    dataFlow()
     
     # Receive real-time twitter messages
-    receive_messages('cloudcoursedelivery', 'MySub', 10)
+    # receive_messages('cloudcoursedelivery', 'MySub', 10)
 
 
     app.run(host='localhost', debug=True)
