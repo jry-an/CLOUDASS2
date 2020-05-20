@@ -34,7 +34,7 @@
 
 
 <div class="CourseTrends">
-<h2>CourseTrends<h2>
+<h2>CourseTrends</h2>
 
 <button type="button" onclick="doHeatMap({{rows}})">Try it</button>
  <p id="demo"></p>
@@ -59,14 +59,18 @@
   </div>
 
   <div class="UniversityNews">
-  <h2>University News<h2>
-  <nav>
-    <ul>
-      <li><a href="#">Bookmark1</a></li>
-      <li><a href="#">Bookmark2</a></li>
-      <li><a href="#">Bookmark3</a></li>
-    </ul>
-  </nav>
+  <h2>University News</h2>
+     {%  for news in news_list %}
+         <nav>
+  <ul>
+  <li>Title: {{ news.title }}
+      <ul>Post: {{ news.content }}</ul>
+      </li>
+  </ul>
+  {% endfor %}
+    </nav>
+<button type="button" href='/news'><a href="/news" >Create New Post</a></button>
+
   </div>
 
 

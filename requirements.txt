@@ -1,7 +1,7 @@
 aiofiles==0.5.0
 apache-beam==2.20.0
 attrs==19.3.0
-avro-python3==1.9.2.1
+# avro-python3==1.9.2.1
 awesome-slugify==1.6.5
 bitarray==1.2.2
 bitstring==3.1.7
@@ -38,20 +38,18 @@ google-auth-httplib2==0.0.3
 google-cloud==0.34.0
 google-cloud-automl==0.10.0
 google-cloud-bigquery==1.24.0
-google-cloud-bigtable==1.0.0
 google-cloud-core==1.3.0
 google-cloud-datastore==1.7.4
 google-cloud-dlp==0.13.0
 google-cloud-language==1.3.0
-google-cloud-pubsub==1.0.2
-google-cloud-spanner==1.13.0
-google-cloud-storage @ file:///C:/Users/Aaron/Desktop/Documents/RMIT/Bachelor%20of%20CS/RMIT%20Semester%203%20-%20Bach%20of%20CS/Cloud%20Computing/Assignment2/course_delivery/google-cloud-storage-1.28.1.tar.gz
+google-cloud-pubsub==0.20.0
+google-cloud-storage
 google-cloud-translate==2.0.1
 google-cloud-videointelligence==1.13.0
 google-cloud-vision==0.42.0
 google-resumable-media==0.5.0
 googleapis-common-protos==1.51.0
-grpc-google-iam-v1==0.12.3
+grpc-google-iam-v1==0.10.0
 grpcio==1.28.1
 grpcio-gcp==0.2.2
 h11==0.9.0
@@ -83,8 +81,6 @@ mysql-connector==2.2.9
 mysql-connector-python==8.0.20
 mysqlclient==1.4.6
 numpy==1.18.4
-oauth2client==3.0.0
-oauthlib==3.1.0
 openpyxl==3.0.3
 pbr==5.4.5
 priority==1.3.0
@@ -111,7 +107,7 @@ rfc3986==1.4.0
 rsa==4.0
 s3transfer==0.3.3
 six==1.14.0
-SQLAlchemy==1.3.16
+SQLAlchemy==1.3.17
 tableschema==1.17.2
 tableschema-sql==1.3.1
 tabulate==0.8.7
