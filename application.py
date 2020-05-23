@@ -11,6 +11,7 @@ import json
 from pythonTemplate import BigQueryClass
 from pythonTemplate import MySQLClass
 from pythonTemplate import reviewClass
+from pythonTemplate import publish
 
 # Twitter API
 from pythonTemplate import twitterAPI
@@ -46,7 +47,7 @@ json.dumps(twitter_data, indent=4, sort_keys=True, default=str)
 
 
 # STEP 2: Push Tweet data to Publisher (pub/sub service)
-publish_messages('cloudcoursedelivery', 'tweet', twitter_data)
+publish.publish_messages('cloudcoursedelivery', 'tweet', twitter_data)
 
 
 
@@ -65,9 +66,9 @@ translate_predict.Translate_File.translating()
 
 # STEP 6: Output translated data onto webpage
 translate_result = []
-    with open('translated_text.txt', 'r') as file:
-                content = file.read()
-                translate_result.append(content)
+with open('translated_text.txt', 'r') as file:
+            content = file.read()
+            translate_result.append(content)
 
 class reCAPTCHA(FlaskForm):
     recaptcha = RecaptchaField()
