@@ -19,33 +19,19 @@
 
 <div class="BookMark">
 
-<h2>BookMark</h2>
-<form method="post">
-  <button name="payload" type="submit" value="Submit">See News Feed</button>
-</form>
- <p>Messages received by this instance:</p>
-  <ul>
-    
-  </ul>
+<h2>Most Recent Twitter Posts <h2>
+<p>--------------------------</p>
 
+
+{% for item in twitter_list %}
+      <p> {{ item.payloadString | safe | replace("[", "") | replace("]", "")}} <p>
+      <p>----------------------------------- </p>
+
+    {% endfor %}
   
-
   </div>
 
 
-<div class="Consulation">
-<h2>Consulation</h2>
-<!-- first array is the row and second array is the column-->
-
-
-  <nav>
-    <ul>
-      <li><a href="#">Bookmark1</a></li>
-      <li><a href="#">Bookmark2</a></li>
-      <li><a href="#">Bookmark3</a></li>
-    </ul>
-  </nav>
-  </div>
 
 <div class="CourseTrends">
 <h2>CourseTrends</h2>
