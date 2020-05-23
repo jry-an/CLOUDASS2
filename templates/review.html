@@ -1,0 +1,22 @@
+  <!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='review.css')}}">
+  </head>
+    <body>
+      <div class="review-form">
+        <form action="{{ url_for('news') }}" method="post">
+            <label for="name"><b>Enter Name: </b></label>
+            <input type="text" placeholder="Enter name here..." name="name" required>
+
+            <label for="review"><b>Enter Review: </b></label>
+            <input id="content-box" type="text" placeholder="Enter review here..." name="review" required></input>
+            {{ form.csrf_token}}
+            {{ form.recaptcha }}
+            {% for error in form.recaptcha.errors %}
+              <p style="color:red;"> Validation is invalid. Please try again. </p>
+            {% endfor %}
+              <button type="submit">Submit</button>
+        </form>
+      </div>
+    </body>
+  </html>

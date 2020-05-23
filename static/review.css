@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(65,115,170,0.6674019949776786) 100%);
+  }
+
+.review-form {
+  font-family: var(--form-field-font-family);
+  font-size: var(--form-field-font-size);
+  box-sizing: border-box;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  border: 3px solid lightblue;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
