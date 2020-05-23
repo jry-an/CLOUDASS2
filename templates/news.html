@@ -1,3 +1,13 @@
+
+
+<!DOCTYPE html>
+
+<head>
+
+  </head>
+<body>
+
+
 <form action="{{ url_for('news') }}" method="post">
    <div class="container">
     <label for="title"><b>Enter Title: </b></label>
@@ -5,7 +15,12 @@
 
     <label for="content"><b>Enter Content: </b></label>
     <input type="text" placeholder="Enter content here..." name="content" required>
-
+    {{ form.csrf_token}}
+    {{ form.recaptcha }}
+    {% for error in form.recaptcha.errors %}
+      <p style="color:red;"> Validation is invalid. Please try again. </p>
+    {% endfor %}
+    
 
   </div>
   <div class="container" >
@@ -13,3 +28,6 @@
       <!-- <button type="button" class="cancelbtn">Cancel</button> -->
   </div>
 </form>
+
+</body>
+</html>
