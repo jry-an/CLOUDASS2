@@ -35,31 +35,23 @@
 
 <div class="CourseTrends">
 <h2>CourseTrends</h2>
+  <label name="languages"> Choose a language:</label>
+  <button class="topbtn" value="spanish" data-button='spanish'>Spanish</button>
 
-<button type="button" onclick="doHeatMap({{rows}})">Try it</button>
- <p id="demo"></p>
-<script>
-  function doHeatMap(rows){
-  let heatmapData = [];
- 
-  for (let i = 0; i < rows.length; i++) {
-      let f = rows[i].f;
-      let coords = { lat: parseFloat(f[0].v), lng: parseFloat(f[1].v) };
-      let latLng = new google.maps.LatLng(coords);
-      heatmapData.push(latLng);
-  }
-        document.getElementById("demo").innerHTML = heatmapData;
+<div id="spanish_text" data-type='spanish'>
+  <center>
+  {% for item in transalted %}
+      <p> {{ item | replace("[", "") | replace("]", "") | replace("{", "") | replace("}", "") | replace("payloadString", "") | replace(':', "") | replace('"', '') | safe }} <p>
+      <p>----------------------------------- </p>
 
-    }
+    {% endfor %}
+    <center>
+</div> 
 
-      var test = {testing:"{{rows}}"};
-        document.getElementById("demo").innerHTML = test["testing"];
-    }
-    </script>
   </div>
 
   <div class="UniversityNews">
-  <h2>University News</h2>
+  <h2>Leave us some feedback!</h2>
      {%  for news in news_list %}
          <nav>
   <ul>
@@ -177,7 +169,7 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
     var point = {lat: {{ location.latitude }}, lng: {{ location.longitude }}};
 
     // Restaurant markers around RMIT
-    var RMITExtraMarker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
     position: point,
     map: RMITmap,
     icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
@@ -191,7 +183,7 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
     });
 
     // Restaurant markers around Victoria University
-    var marker = new google.maps.Marker({
+    var marker3 = new google.maps.Marker({
     position: point,
     map: vicMap,
     icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',

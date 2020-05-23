@@ -74,6 +74,8 @@ body {
     padding: 15px;
     border: 2px solid grey;
     border-style: ridge;
+    overflow: auto;
+
 }
 
 .UniversityNews {
@@ -87,6 +89,8 @@ body {
     padding: 15px;
     border: 2px solid grey;
     border-style: ridge;
+    overflow: auto;
+
 }
 
 
