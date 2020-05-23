@@ -35,19 +35,19 @@ app.config['RECAPTCHA_PRIVATE_KEY'] = '6Le0ffoUAAAAADKNzRynp6vL2atQ40XojYNTtW20'
 
 # STEP 1: Retrive Tweet data
 twitter_data = []
-twitter_client = twitterAPI.TwitterClient('university')
-Tweets = twitter_client.get_most_recent_tweets(10)
+# twitter_client = twitterAPI.TwitterClient('university')
+# Tweets = twitter_client.get_most_recent_tweets(10)
 
 # Put Json Results into array for publishing
-for item in Tweets:
-    twitter_data.append(item)
-# Convert array into JSON data
-json.dumps(twitter_data, indent=4, sort_keys=True, default=str)
+# for item in Tweets:
+#     twitter_data.append(item)
+# # Convert array into JSON data
+# json.dumps(twitter_data, indent=4, sort_keys=True, default=str)
 
 
 
 # STEP 2: Push Tweet data to Publisher (pub/sub service)
-publish.publish_messages('cloudcoursedelivery', 'tweet', twitter_data)
+# publish.publish_messages('cloudcoursedelivery', 'tweet', twitter_data)
 
 
 
@@ -78,12 +78,12 @@ def index():
     return render_template('home.html', universities=uniClass.uni,
                                          rows=food_class.locations,
                                           twitter_list=tweet_query_result,
-                                           news_list=review_class.query(),
+                                           review_list=review_class.query(),
                                             translated=translate_result)
 
 @app.route('/review')
 def news():
-    form = LoginForm()
+    form = reCAPTCHA()
     return render_template('review.html', form = form)
 
 
