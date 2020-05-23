@@ -26,8 +26,6 @@ class Translate_File():
         response = prediction_client.predict(model_full_id, payload)
         translated_content = response.payload[0].translation.translated_content
 
-        print(u"Translated content: {}".format(translated_content.content))
-
         with open('translated_text.txt', 'w') as file:
                 file.write(json.dumps(translated_content.content))
 

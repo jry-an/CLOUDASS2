@@ -10,60 +10,53 @@
 {% set vicLng = school[2].lng %}
 
 
-
-
 {% block head %}
-
+  <center>
+    <h1 id="website_title"> Course Delivery </h1>
+  </center>
 {% endblock %}
 {% block body %}
 
-<div class="BookMark">
-
-<h2>Most Recent Twitter Posts <h2>
-<p>--------------------------</p>
-
-
-{% for item in twitter_list %}
+<div class="recent-tweets-en">
+  <h2>Most Recent Twitter Posts <h2>
+  <p>------------------</p>
+  {% for item in twitter_list %}
       <p> {{ item.payloadString | safe | replace("[", "") | replace("]", "")}} <p>
-      <p>----------------------------------- </p>
-
-    {% endfor %}
-  
-  </div>
+      <p>------------------------------------ </p>
+  {% endfor %}  
+</div>
 
 
-
-<div class="CourseTrends">
-<h2>CourseTrends</h2>
+<div class="recent-tweets-translated">
+  <h2>Translated Twitter Posts</h2>
+  <p>---------------------------- </p>
   <label name="languages"> Choose a language:</label>
-  <button class="topbtn" value="spanish" data-button='spanish'>Spanish</button>
-
-<div id="spanish_text" data-type='spanish'>
-  <center>
-  {% for item in transalted %}
-      <p> {{ item | replace("[", "") | replace("]", "") | replace("{", "") | replace("}", "") | replace("payloadString", "") | replace(':', "") | replace('"', '') | safe }} <p>
-      <p>----------------------------------- </p>
-
+  <button name="spanish" onclick="display_spanish_text()">Spanish</button>
+  <div>
+    {% for item in translated %}
+      <p id="spanish_text"> {{ item | replace("[", "") |
+       replace("]", "") |
+        replace("{", "") |
+         replace("}", "") |
+          replace("payloadString", "") |
+           replace(':', "") |
+            replace('"', '') | safe }} </p>
     {% endfor %}
-    <center>
-</div> 
-
   </div>
+</div>
 
-  <div class="UniversityNews">
-  <h2>Leave us some feedback!</h2>
-     {%  for news in news_list %}
-         <nav>
-  <ul>
-  <li>Title: {{ news.title }}
-      <ul>Post: {{ news.content }}</ul>
-      </li>
-  </ul>
-  {% endfor %}
-    </nav>
-<button type="button" href='/news'><a href="/news" >Create New Post</a></button>
-
-  </div>
+<div class="reviews">
+  <center>
+    <h2>Leave us some feedback!</h2>
+    {%  for review in review_list %}
+      <nav>
+         <ul> {{ review.name }} </ul>
+         <ul> {{ review.review }} </ul>
+    {% endfor %}
+      </nav>
+    <button type="button" href='/review'><a href="/review" >How can we improve?</a></button>
+  </center>
+</div>
 
 
 <div class="Content">
@@ -77,47 +70,6 @@
 
 </div>
 </form>
-
-
-<script>
-function myFunction() {
-  var a = document.getElementById("myDropdown").classList.toggle("show");
-  if (a.style.display === "none") {
-    a.style.display = "block";
-    var d = "DA"
-  } else {
-    a.style.display = "none";
-  }
-}
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("SearchBar");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("Content");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
-
-document.querySelectorAll('.topbtn').forEach(function(item) {
-  let getBtnData = item.dataset.button;
-  item.addEventListener('click', function(e) {
-    document.querySelector('[data-type="' + getBtnData + '"]').classList.toggle('visibility')
-  })
-
-})
-
-</script>
-
-
-
-
 
 <script type="text/javascript">
 
@@ -189,7 +141,6 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
     icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
     });
 
-
   {% endfor %}
 
 }
@@ -197,29 +148,29 @@ document.querySelectorAll('.topbtn').forEach(function(item) {
 </script>
     
 <div id="contactus" data-type='victoria'>
+  <br>
   <center>
+    <h2> Victoria University </h2>
     <div id="vicMap" style="width:60%; height:500px;"></div>
-      <p> Vic Content </p>
-    <center>
+  <center>
 </div> 
 
 
 <div id="contactus" data-type='melbourne'>
+  <br>
   <center>
+    <h2> Melbourne University </h2>
     <div id="melbMap" style="width:60%; height:500px;"></div>
-      <p> melb Content </p>
-
-    <center>
+  <center>
 </div> 
 
 
 <div id="contactus" data-type='rmit'>
+  <br>
   <center>
+    <h2> Royal Melbourne Institute of Technology </h2>
     <div id="rmitMap" style="width:60%; height:500px;"></div>
-<button onclick="window.location.href = 'map.html';">Click Here</button>
-  <p>This is an example sentence right here As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.
-
-    <center>
+  <center>
 </div>
 
 

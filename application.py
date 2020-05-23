@@ -10,7 +10,7 @@ import json
 # Cohesive classes
 from pythonTemplate import BigQueryClass
 from pythonTemplate import MySQLClass
-from pythonTemplate import NewsClass
+from pythonTemplate import reviewClass
 
 # Twitter API
 from pythonTemplate import twitterAPI
@@ -22,76 +22,84 @@ from autoMLTranslate import translate_predict
 uniClass = MySQLClass.universities()
 food_class = BigQueryClass.Food_Coordinations()
 twitter_class = BigQueryClass.Tweet_List()
-newsClass = NewsClass
+review_class = reviewClass
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Thisisasecret!'
+
+# reCAPTCHA authenticaton
+app.config['SECRET_KEY'] = 'PersonalSecretKey!'
 app.config['RECAPTCHA_PUBLIC_KEY'] = '6Le0ffoUAAAAABDLaqsF0lFapZWJETkNjq6iRLJS'
 app.config['RECAPTCHA_PRIVATE_KEY'] = '6Le0ffoUAAAAADKNzRynp6vL2atQ40XojYNTtW20'
 
+# STEP 1: Retrive Tweet data
+twitter_data = []
+twitter_client = twitterAPI.TwitterClient('university')
+Tweets = twitter_client.get_most_recent_tweets(10)
 
-    ################ FILE FUNCTIONS ####################
-# obtain table from BigQuery and append to textfile
+# Put Json Results into array for publishing
+for item in Tweets:
+    twitter_data.append(item)
+# Convert array into JSON data
+json.dumps(twitter_data, indent=4, sort_keys=True, default=str)
+
+
+
+# STEP 2: Push Tweet data to Publisher (pub/sub service)
+publish_messages('cloudcoursedelivery', 'tweet', twitter_data)
+
+
+
+# STEP 3: Use Dataflow to convert tweet data into BigQuery tables
 tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
-#   Translate tweet messages to spanish by using the trained model
+
+
+# STEP 4: Retrieve BigQuery tweet data column and append inside a textfile (executed inside BigQuery python file)
+
+# STEP 5: Use autoML trained model to predict the english text into the selected language (spanish)
+# and append/overrite existing textfile
 translate_predict.Translate_File.translating()
 
-class LoginForm(FlaskForm):
-    recaptcha = RecaptchaField()
 
-@app.route("/", methods=['GET', 'POST'])
-def index():
-    translate_result = []
+
+# STEP 6: Output translated data onto webpage
+translate_result = []
     with open('translated_text.txt', 'r') as file:
                 content = file.read()
                 translate_result.append(content)
 
-    return render_template('home.html', universities=uniClass.uni, rows=food_class.locations, twitter_list=tweet_query_result, news_list=newsClass.query(), translated=translate_result)
+class reCAPTCHA(FlaskForm):
+    recaptcha = RecaptchaField()
 
-# render news page to enter a new post
-@app.route('/news')
+@app.route("/")
+def index():
+    return render_template('home.html', universities=uniClass.uni,
+                                         rows=food_class.locations,
+                                          twitter_list=tweet_query_result,
+                                           news_list=review_class.query(),
+                                            translated=translate_result)
+
+@app.route('/review')
 def news():
     form = LoginForm()
-    return render_template('news.html', form = form)
+    return render_template('review.html', form = form)
 
 
-
-@app.route('/news', methods=['GET', 'POST'])
+@app.route('/review', methods=['GET', 'POST'])
 def news_post():
-    form = LoginForm()
+    form = reCAPTCHA()
 
     if form.validate_on_submit():
         # get title and content from html
-        news_title = request.form['title']
-        news_content = request.form['content']
+        name = request.form['name']
+        review = request.form['review']
         # post new news to datastore entity
-        newsClass.new_news(news_title, news_content)
+        review_class.new_reviews(name, review)
         return redirect(url_for('index'), code=303)
 
-    return render_template('news.html', form=form)
+    return render_template('review.html', form=form)
 
 if __name__ == "__main__":
-    
-    twitter_data = []
-
-    ############### PUBLISHING TO PUB/SUB ###############
-    # Reference to twitter class
-    # twitter_client = twitterAPI.TwitterClient('university')
-
-    # # Reference to specified format
-    # Tweets = twitter_client.get_most_recent_tweets(10)
-
-    # # Put Json Results into array for publishing
-    # for item in Tweets:
-    #     twitter_data.append(item)
-
-    # # Convert array into JSON data
-    # json.dumps(twitter_data, indent=4, sort_keys=True, default=str)
-
-    # # Publish real-time twitter messages to pub/sub
-    # publish_messages('cloudcoursedelivery', 'tweet', twitter_data)
-  
 
     app.run(host='localhost', debug=True, use_reloader=False)

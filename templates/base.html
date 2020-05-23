@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <script type="text/javascript" src="googleMapAPI.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
-    <meta charset="UTF-8">
+    <html lang="en">
+    <head>
+        <title>CourseDelivery</title>
+        <script async type="text/javascript" src="{{ url_for('static', filename='hide_show_text.js')}}"></script>
 
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <title>Local Schools</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-        crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='base.css')}}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+            integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+            crossorigin="anonymous">
 
-    <!-- Produces the google map (Loading the Google Map API key) -->
-    <!-- Loads the map API from google -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHy5bRAIpYqxHz3E4gLSq_ryzBmG_Cc14&callback=initMap"
-    type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
 
-    <title>CourseDelivery</title>
-
-    <div class="topnav">
-        <a id="profile" href="#about">Profile</a>
-    </div>
+        <!-- Produces the google map (Loading the Google Map API key) -->
+        <!-- Loads the map API from google -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHy5bRAIpYqxHz3E4gLSq_ryzBmG_Cc14&callback=initMap"
+        type="text/javascript"></script>
 
     {% block head %}{% endblock %}
-</head>
-<body>
-
-   {% block body %}{% endblock %}
-
-{% block monash %}{% endblock %}
-    
-</body>
+    </head>
+    <body>
+    {% block body %}{% endblock %}
+    </body>
 </html>
