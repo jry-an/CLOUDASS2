@@ -54,7 +54,7 @@ def index():
 @app.route('/news')
 def news():
     form = LoginForm()
-    return render_template('news.html', form = form)
+    return render_template('news.html', form=form)
 
 
 

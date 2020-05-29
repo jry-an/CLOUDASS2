@@ -141,3 +141,5 @@ virt/Scripts/tabulator.exe
 virt/Scripts/undill
 virt/Scripts/unidecode.exe
 virt/Scripts/xml2json.exe
+virt/Scripts/gunicorn.exe
+virt/Scripts/gunicorn_paster.exe

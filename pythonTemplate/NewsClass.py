@@ -3,13 +3,13 @@ import datetime
 
 
 datastore_client = datastore.Client()
-kind = 'News'
+kind = 'Reviews'
 
 
 def new_news(title, content):
     entity = datastore.Entity(key=datastore_client.key(kind))
-    entity['title'] = title
-    entity['content'] = content
+    entity['name'] = title
+    entity['review'] = content
     entity['time'] = datetime.datetime.now()
     datastore_client.put(entity)
 
