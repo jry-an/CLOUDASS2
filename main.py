@@ -1,11 +1,3 @@
-import sys
-
-sys.path.insert(0, 'lib')
-
-# from google.appengine.ext import vendor
-# # Add any libraries installed in the "lib" folder.
-# vendor.add('lib')
-
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -17,9 +9,9 @@ import json
 
 
 # Cohesive classes
-# from pythonTemplate import BigQueryClass
+from pythonTemplate import BigQueryClass
 from pythonTemplate import MySQLClass
-# from pythonTemplate import reviewClass
+from pythonTemplate import reviewClass
 from pythonTemplate import publish
 
 # Twitter API
@@ -31,7 +23,7 @@ from pythonTemplate import twitterAPI
 # Class Clients
 uniClass = MySQLClass.universities()
 # food_class = BigQueryClass.Food_Coordinations()
-# twitter_class = BigQueryClass.Tweet_List()
+twitter_class = BigQueryClass.Tweet_List()
 # review_class = reviewClass
 
 
@@ -61,7 +53,7 @@ twitter_data = []
 
 
 # STEP 3: Use Dataflow to convert tweet data into BigQuery tables
-# tweet_query_result = BigQueryClass.Tweet_List.file_append()
+tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 
 
@@ -84,12 +76,13 @@ class reCAPTCHA(FlaskForm):
 
 @app.route("/")
 def index():
-    return render_template('home.html',
+    return render_template('home.html'
+                           # ,
                            # universities=0,
-                                         rows=0,
-                                          twitter_list=0,
-                                           review_list=0,
-                                            translated=0
+                           #               rows=0,
+                                          ,twitter_list=tweet_query_result,
+                           #                 review_list=review_class.query(),
+                           #                  translated=0
                            )
 
 @app.route('/review')
