@@ -8,7 +8,7 @@ from apache_beam.options.pipeline_options import GoogleCloudOptions
 import re
 import sys
 
-import application as app
+import main as app
 
 def dataFlow(argv=None):
     sys.setrecursionlimit(2000)

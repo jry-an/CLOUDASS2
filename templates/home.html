@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% set school = universities %}
-{% set rmitLat = school[0].lat %}
-{% set rmitLng = school[0].lng %}
-
-{% set melbLat = school[1].lat %}
-{% set melbLng = school[1].lng %}
-
-{% set vicLat = school[2].lat %}
-{% set vicLng = school[2].lng %}
+{#{% set school = universities %}#}
+{#{% set rmitLat = school[0].lat %}#}
+{#{% set rmitLng = school[0].lng %}#}
+{##}
+{#{% set melbLat = school[1].lat %}#}
+{#{% set melbLng = school[1].lng %}#}
+{##}
+{#{% set vicLat = school[2].lat %}#}
+{#{% set vicLng = school[2].lng %}#}
 
 
 {% block head %}
@@ -20,10 +20,10 @@
 <div class="recent-tweets-en">
   <h2>Most Recent Twitter Posts <h2>
   <p>------------------</p>
-  {% for item in twitter_list %}
-      <p> {{ item.payloadString | safe | replace("[", "") | replace("]", "")}} <p>
-      <p>------------------------------------ </p>
-  {% endfor %}  
+{#  {% for item in twitter_list %}#}
+{#      <p> {{ item.payloadString | safe | replace("[", "") | replace("]", "")}} <p>#}
+{#      <p>------------------------------------ </p>#}
+{#  {% endfor %}#}
 </div>
 
 
@@ -33,26 +33,26 @@
   <label name="languages"> Choose a language:</label>
   <button name="spanish" onclick="display_spanish_text()">Spanish</button>
   <div>
-    {% for item in translated %}
-      <p id="spanish_text"> {{ item | replace("[", "") |
-       replace("]", "") |
-        replace("{", "") |
-         replace("}", "") |
-          replace("payloadString", "") |
-           replace(':', "") |
-            replace('"', '') | safe }} </p>
-    {% endfor %}
+{#    {% for item in translated %}#}
+{#      <p id="spanish_text"> {{ item | replace("[", "") |#}
+{#       replace("]", "") |#}
+{#        replace("{", "") |#}
+{#         replace("}", "") |#}
+{#          replace("payloadString", "") |#}
+{#           replace(':', "") |#}
+{#            replace('"', '') | safe }} </p>#}
+{#    {% endfor %}#}
   </div>
 </div>
 
 <div class="reviews">
   <center>
     <h2>Leave us some feedback!</h2>
-    {%  for review in review_list %}
-      <nav>
-         <ul> {{ review.name }} </ul>
-         <ul> {{ review.review }} </ul>
-    {% endfor %}
+{#    {%  for review in review_list %}#}
+{#      <nav>#}
+{#         <ul> {{ review.name }} </ul>#}
+{#         <ul> {{ review.review }} </ul>#}
+{#    {% endfor %}#}
       </nav>
     <button type="button" href='/review'><a href="/review" >How can we improve?</a></button>
   </center>
@@ -63,9 +63,9 @@
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Select University</button>
   <div id="myDropdown" class="dropdown-content">
-    <button class="topbtn"  data-button='rmit'> {{ school[0].name }}</button>
-    <button class="topbtn"  data-button='melbourne'> {{ school[1].name }}</button>
-    <button class="topbtn"  data-button='victoria'> {{ school[2].name }}</button>
+{#    <button class="topbtn"  data-button='rmit'> {{ school[0].name }}</button>#}
+{#    <button class="topbtn"  data-button='melbourne'> {{ school[1].name }}</button>#}
+{#    <button class="topbtn"  data-button='victoria'> {{ school[2].name }}</button>#}
   </div>
 
 </div>
@@ -75,73 +75,73 @@
 
     // Creates the google map
     function initMap() {
-////////////////////////////////////////////////////////////////////////////////////////      
-        // RMIT Google Map Display
-        var myRMITLatLng = {lat: {{rmitLat}}, lng: {{ rmitLng }}};
-        var RMITmap =  new google.maps.Map(document.getElementById('rmitMap'), {
-            center: myRMITLatLng,
-            zoom: 16
-          });
-          // Displays a red marker on the coordinates
-          var RMITmarker = new google.maps.Marker({
-          position: myRMITLatLng,
-          map: RMITmap,
-        });
-
-////////////////////////////////////////////////////////////////////////////////////////      
-        // Victoria University Google Map Display
-        var myVicLatLng = {lat: {{vicLat}}, lng: {{ vicLng }}};
-        var vicMap =  new google.maps.Map(document.getElementById('vicMap'), {
-            center: myVicLatLng,
-            zoom: 16
-          });
-         var vicmarker = new google.maps.Marker({
-          position: myVicLatLng,
-          map: vicMap,
-        });
-
-////////////////////////////////////////////////////////////////////////////////////////      
-       // Melbourne University Google Map Display
-       var myMelbLatLng = {lat: {{melbLat}}, lng: {{ melbLng }}};
-       var melbMap =  new google.maps.Map(document.getElementById('melbMap'), {
-            center: myMelbLatLng,
-            zoom: 16
-          });
-          // Displays a red marker on the coordinates
-          var melbMarker = new google.maps.Marker({
-          position: myMelbLatLng,
-          map: melbMap,
-        });
-
-////////////////////////////////////////////////////////////////////////////////////////      
-    // Restaurant Markers around the universities
-    {% for location in rows %}
-
-    // Grab all coordinates
-    var point = {lat: {{ location.latitude }}, lng: {{ location.longitude }}};
-
-    // Restaurant markers around RMIT
-    var marker = new google.maps.Marker({
-    position: point,
-    map: RMITmap,
-    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-    });
-
-    // Restaurant markers around Melbounre University
-    var marker = new google.maps.Marker({
-    position: point,
-    map: melbMap,
-    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-    });
-
-    // Restaurant markers around Victoria University
-    var marker3 = new google.maps.Marker({
-    position: point,
-    map: vicMap,
-    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-    });
-
-  {% endfor %}
+////////////////////////////////////////////////////////////////////////////////////////
+{#        // RMIT Google Map Display#}
+{#        var myRMITLatLng = {lat: {{rmitLat}}, lng: {{ rmitLng }}};#}
+{#        var RMITmap =  new google.maps.Map(document.getElementById('rmitMap'), {#}
+{#            center: myRMITLatLng,#}
+{#            zoom: 16#}
+{#          });#}
+{#          // Displays a red marker on the coordinates#}
+{#          var RMITmarker = new google.maps.Marker({#}
+{#          position: myRMITLatLng,#}
+{#          map: RMITmap,#}
+{#        });#}
+{##}
+{#////////////////////////////////////////////////////////////////////////////////////////#}
+{#        // Victoria University Google Map Display#}
+{#        var myVicLatLng = {lat: {{vicLat}}, lng: {{ vicLng }}};#}
+{#        var vicMap =  new google.maps.Map(document.getElementById('vicMap'), {#}
+{#            center: myVicLatLng,#}
+{#            zoom: 16#}
+{#          });#}
+{#         var vicmarker = new google.maps.Marker({#}
+{#          position: myVicLatLng,#}
+{#          map: vicMap,#}
+{#        });#}
+{##}
+{#////////////////////////////////////////////////////////////////////////////////////////#}
+{#       // Melbourne University Google Map Display#}
+{#       var myMelbLatLng = {lat: {{melbLat}}, lng: {{ melbLng }}};#}
+{#       var melbMap =  new google.maps.Map(document.getElementById('melbMap'), {#}
+{#            center: myMelbLatLng,#}
+{#            zoom: 16#}
+{#          });#}
+{#          // Displays a red marker on the coordinates#}
+{#          var melbMarker = new google.maps.Marker({#}
+{#          position: myMelbLatLng,#}
+{#          map: melbMap,#}
+{#        });#}
+{##}
+{#////////////////////////////////////////////////////////////////////////////////////////#}
+{#    // Restaurant Markers around the universities#}
+{#    {% for location in rows %}#}
+{##}
+{#    // Grab all coordinates#}
+{#    var point = {lat: {{ location.latitude }}, lng: {{ location.longitude }}};#}
+{##}
+{#    // Restaurant markers around RMIT#}
+{#    var marker = new google.maps.Marker({#}
+{#    position: point,#}
+{#    map: RMITmap,#}
+{#    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',#}
+{#    });#}
+{##}
+{#    // Restaurant markers around Melbounre University#}
+{#    var marker = new google.maps.Marker({#}
+{#    position: point,#}
+{#    map: melbMap,#}
+{#    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',#}
+{#    });#}
+{##}
+{#    // Restaurant markers around Victoria University#}
+{#    var marker3 = new google.maps.Marker({#}
+{#    position: point,#}
+{#    map: vicMap,#}
+{#    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',#}
+{#    });#}
+{##}
+{#  {% endfor %}#}
 
 }
 

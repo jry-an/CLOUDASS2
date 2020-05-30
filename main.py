@@ -1,3 +1,11 @@
+import sys
+
+sys.path.insert(0, 'lib')
+
+# from google.appengine.ext import vendor
+# # Add any libraries installed in the "lib" folder.
+# vendor.add('lib')
+
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -7,23 +15,24 @@ from wtforms import StringField, PasswordField
 from wtforms.validators import InputRequired, Length, AnyOf
 import json
 
+
 # Cohesive classes
-from pythonTemplate import BigQueryClass
+# from pythonTemplate import BigQueryClass
 from pythonTemplate import MySQLClass
-from pythonTemplate import reviewClass
+# from pythonTemplate import reviewClass
 from pythonTemplate import publish
 
 # Twitter API
 from pythonTemplate import twitterAPI
 
 # autoML Translate
-from autoMLTranslate import translate_predict
+# from autoMLTranslate import translate_predict
 
 # Class Clients
 uniClass = MySQLClass.universities()
-food_class = BigQueryClass.Food_Coordinations()
-twitter_class = BigQueryClass.Tweet_List()
-review_class = reviewClass
+# food_class = BigQueryClass.Food_Coordinations()
+# twitter_class = BigQueryClass.Tweet_List()
+# review_class = reviewClass
 
 
 app = Flask(__name__)
@@ -52,7 +61,7 @@ twitter_data = []
 
 
 # STEP 3: Use Dataflow to convert tweet data into BigQuery tables
-tweet_query_result = BigQueryClass.Tweet_List.file_append()
+# tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 
 
@@ -60,7 +69,7 @@ tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 # STEP 5: Use autoML trained model to predict the english text into the selected language (spanish)
 # and append/overrite existing textfile
-translate_predict.Translate_File.translating()
+# translate_predict.Translate_File.translating()
 
 
 
@@ -75,16 +84,20 @@ class reCAPTCHA(FlaskForm):
 
 @app.route("/")
 def index():
-    return render_template('home.html', universities=uniClass.uni,
-                                         rows=food_class.locations,
-                                          twitter_list=tweet_query_result,
-                                           review_list=review_class.query(),
-                                            translated=translate_result)
+    return render_template('home.html',
+                           # universities=0,
+                                         rows=0,
+                                          twitter_list=0,
+                                           review_list=0,
+                                            translated=0
+                           )
 
 @app.route('/review')
 def news():
     form = reCAPTCHA()
-    return render_template('review.html', form = form)
+    return render_template('review.html'
+                           , form = form
+                           )
 
 
 @app.route('/review', methods=['GET', 'POST'])
@@ -96,11 +109,17 @@ def news_post():
         name = request.form['name']
         review = request.form['review']
         # post new news to datastore entity
-        review_class.new_reviews(name, review)
+        # review_class.new_reviews(name, review)
         return redirect(url_for('index'), code=303)
 
-    return render_template('review.html', form=form)
+    return render_template('review.html'
+                           , form=form
+                           )
 
-if __name__ == "__main__":
 
-    app.run(host='localhost', debug=True, use_reloader=False)
+if __name__ == '__main__':
+    # This is used when running locally only. When deploying to Google App
+    # Engine, a webserver process such as Gunicorn will serve the app. This
+    # can be configured by adding an `entrypoint` to app.yaml.
+    app.run(host='127.0.0.1', debug=True)
+# [END gae_python37_app]

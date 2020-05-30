@@ -1,19 +1,18 @@
 runtime: python37
-
-instance_class: F2
-threadsafe: true
-
-
+#entrypoint: uwsgi --http-socket :8080 --wsgi-file main.py --callable app --master --processes 1 --threads 2
+entrypoint: gunicorn  -b :$PORT main:app --timeout 1000
 # [START handlers]
 handlers:
+- url: /static
+  static_dir: static
 - url: /.*
-  script: application.app
+  script: auto
 # [END handlers]
 
-# [START libraries]
-libraries:
-- name: flask
-  version: latest
-- name: ssl
-  version: latest
-# [END libraries]
+## [START libraries]
+#libraries:
+#- name: flask
+#  version: latest
+#- name: ssl
+#  version: latest
+## [END libraries]
