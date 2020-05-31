@@ -1,4 +1,4 @@
-from google.cloud import pubsub_v1
+# from google.cloud import pubsub_v1
 
 def receive_messages(project_id, subscription_name, timeout=None):
     """Receives messages from a pull subscription."""

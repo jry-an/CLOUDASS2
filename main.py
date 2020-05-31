@@ -22,9 +22,9 @@ from pythonTemplate import twitterAPI
 
 # Class Clients
 uniClass = MySQLClass.universities()
-# food_class = BigQueryClass.Food_Coordinations()
-twitter_class = BigQueryClass.Tweet_List()
-# review_class = reviewClass
+food_class = BigQueryClass.Food_Coordinations()
+# twitter_class = BigQueryClass.Tweet_List()
+review_class = reviewClass
 
 
 app = Flask(__name__)
@@ -53,7 +53,7 @@ twitter_data = []
 
 
 # STEP 3: Use Dataflow to convert tweet data into BigQuery tables
-tweet_query_result = BigQueryClass.Tweet_List.file_append()
+# tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 
 
@@ -78,10 +78,10 @@ class reCAPTCHA(FlaskForm):
 def index():
     return render_template('home.html'
                            # ,
-                           # universities=0,
-                           #               rows=0,
-                                          ,twitter_list=tweet_query_result,
-                           #                 review_list=review_class.query(),
+                           ,universities=uniClass.uni
+                                         ,rows=food_class.locations
+                           #                ,twitter_list=tweet_query_result,
+                                           ,review_list=review_class.query()
                            #                  translated=0
                            )
 
@@ -97,17 +97,16 @@ def news():
 def news_post():
     form = reCAPTCHA()
 
-    if form.validate_on_submit():
-        # get title and content from html
-        name = request.form['name']
-        review = request.form['review']
-        # post new news to datastore entity
-        # review_class.new_reviews(name, review)
-        return redirect(url_for('index'), code=303)
+    # get title and content from html
+    name = request.form['name']
+    review = request.form['review']
+    # post new news to datastore entity
+    review_class.new_reviews(name, review)
+    return redirect(url_for('index'), code=303)
 
-    return render_template('review.html'
-                           , form=form
-                           )
+    # return render_template('review.html'
+    #                        , form=form
+    #                        )
 
 
 if __name__ == '__main__':

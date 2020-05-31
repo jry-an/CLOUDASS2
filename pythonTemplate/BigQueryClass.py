@@ -10,6 +10,7 @@ class Food_Coordinations:
         locationExecute = client.query(query)  # Make an API request
         locations = [dict(row) for row in locationExecute]
 
+
 class Tweet_List:
         twitter_list = []
         def file_append():
