@@ -1,6 +1,13 @@
 runtime: python
 env: flex
+entrypoint: gunicorn  -b :$PORT main:app --timeout 1000
 
+
+env_variables:
+    PUBSUB_TOPIC: tweet
+    # This token is used to verify that requests originate from your
+    # application. It can be any sufficiently random string.
+    PUBSUB_VERIFICATION_TOKEN: 1234abc
 manual_scaling:
   instances: 1
 resources:
@@ -13,7 +20,6 @@ beta_settings:
 
 runtime_config:
   python_version: 3
-entrypoint: gunicorn  -b :$PORT main:app --timeout 1000
 # [START handlers]
 handlers:
 - url: /static
@@ -21,6 +27,9 @@ handlers:
 - url: /.*
   script: auto
 # [END handlers]
+
+# pub/sub
+
 
 ## [START libraries]
 #libraries:
