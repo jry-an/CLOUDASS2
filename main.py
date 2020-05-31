@@ -1,6 +1,6 @@
 # render_template knows to search into a folder named templates
 from flask import Flask, render_template, request, redirect, url_for
-
+from google.cloud import datastore
 # reCaptcha
 from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, PasswordField
@@ -18,12 +18,12 @@ from pythonTemplate import publish
 from pythonTemplate import twitterAPI
 
 # autoML Translate
-# from autoMLTranslate import translate_predict
+from autoMLTranslate import translate_predict
 
 # Class Clients
 uniClass = MySQLClass.universities()
 food_class = BigQueryClass.Food_Coordinations()
-# twitter_class = BigQueryClass.Tweet_List()
+twitter_class = BigQueryClass.Tweet_List()
 review_class = reviewClass
 
 
@@ -53,7 +53,7 @@ twitter_data = []
 
 
 # STEP 3: Use Dataflow to convert tweet data into BigQuery tables
-# tweet_query_result = BigQueryClass.Tweet_List.file_append()
+tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 
 
@@ -61,15 +61,21 @@ twitter_data = []
 
 # STEP 5: Use autoML trained model to predict the english text into the selected language (spanish)
 # and append/overrite existing textfile
-# translate_predict.Translate_File.translating()
+translate_predict.Translate_File.translating()
 
 
 
 # STEP 6: Output translated data onto webpage
 translate_result = []
-with open('translated_text.txt', 'r') as file:
-            content = file.read()
-            translate_result.append(content)
+# with open('translated_text.txt', 'r') as file:
+#             content = file.read()
+#             translate_result.append(content)
+datastore_client = datastore.Client()
+kind = 'Translate'
+query = datastore_client.query(kind=kind)
+content = list(query.fetch())
+for i in content:
+    translate_result.append(str(i))
 
 class reCAPTCHA(FlaskForm):
     recaptcha = RecaptchaField()
@@ -77,12 +83,11 @@ class reCAPTCHA(FlaskForm):
 @app.route("/")
 def index():
     return render_template('home.html'
-                           # ,
                            ,universities=uniClass.uni
                                          ,rows=food_class.locations
-                           #                ,twitter_list=tweet_query_result,
+                                          ,twitter_list=tweet_query_result
                                            ,review_list=review_class.query()
-                           #                  translated=0
+                                            ,translated=translate_result
                            )
 
 @app.route('/review')
