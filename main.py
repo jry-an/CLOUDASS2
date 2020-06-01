@@ -68,21 +68,25 @@ tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 # STEP 5: Use autoML trained model to predict the english text into the selected language (spanish)
 # and append/overrite existing textfile
-translate_predict.Translate_File.translating()
+# translate_predict.Translate_File.translating()
+
+translated_result = translate_predict.sample_translate_text_with_model('TRL4666006290886033408', tweet_query_result, 'es', 'en', 'cloudcoursedelivery', 'us-central1', )
+
+
 
 
 
 # STEP 6: Output translated data onto webpage
-translate_result = []
+# translate_result = []
 # with open('translated_text.txt', 'r') as file:
 #             content = file.read()
 #             translate_result.append(content)
-datastore_client = datastore.Client()
-kind = 'Translate'
-query = datastore_client.query(kind=kind)
-content = list(query.fetch())
-for i in content:
-    translate_result.append(str(i))
+# datastore_client = datastore.Client()
+# kind = 'Translate'
+# query = datastore_client.query(kind=kind)
+# content = list(query.fetch())
+# for i in content:
+#     translate_result.append(str(i))
 
 class reCAPTCHA(FlaskForm):
     recaptcha = RecaptchaField()
@@ -107,9 +111,9 @@ def index():
                            ,universities=uniClass.uni,
                                          rows=food_class.locations,
                                           twitter_list=tweet_query_result,
+                                          translated_text=translated_result,
                                             twitter_data=twitter_data,
-                                           review_list=review_class.query(),
-                                             translated=translate_result)
+                                           review_list=review_class.query())
 
 @app.route('/review')
 def news():

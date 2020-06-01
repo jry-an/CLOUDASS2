@@ -14,11 +14,11 @@ class Food_Coordinations:
 class Tweet_List:
         twitter_list = []
         def file_append():
-                tweet_query = """SELECT payloadString FROM `cloudcoursedelivery.bqTweets.tweeting_error_records`"""
+                tweet_query = """SELECT payloadString FROM `cloudcoursedelivery.bqTweets.tweeting_error_records` LIMIT 5"""
                 t_listExecute = client.query(tweet_query)  # Make an API request
                 twitter_list = [dict(row) for row in t_listExecute]
                 # Creates a new txt file if its non-existent, else overwrites content
                 # with open('translated_text.txt', 'w') as file:
                 #         file.write(json.dumps(twitter_list))
-                
+
                 return twitter_list
