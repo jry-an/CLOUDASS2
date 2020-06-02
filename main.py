@@ -52,44 +52,17 @@ for item in Tweets:
 json.dumps(twitter_data, indent=4, sort_keys=True, default=str)
 
 # STEP 2: Push Tweet data to Publisher (pub/sub service)
-
-
 publisher = pubsub_v1.PublisherClient()
-# The `topic_path` method creates a fully qualified identifier
-# in the form `projects/{project_id}/topics/{topic_name}`
 
 
 # STEP 3: Use Dataflow to convert tweet data into BigQuery tables
 tweet_query_result = BigQueryClass.Tweet_List.file_append()
 
 
-
-# STEP 4: Retrieve BigQuery tweet data column and append inside a textfile (executed inside BigQuery python file)
-
 # STEP 5: Use autoML trained model to predict the english text into the selected language (spanish)
-# and append/overrite existing textfile
-# translate_predict.Translate_File.translating()
-
 translated_result = translate_predict.sample_translate_text_with_model('TRL4666006290886033408', tweet_query_result, 'es', 'en', 'cloudcoursedelivery', 'us-central1', )
 
 
-
-
-
-# STEP 6: Output translated data onto webpage
-# translate_result = []
-# with open('translated_text.txt', 'r') as file:
-#             content = file.read()
-#             translate_result.append(content)
-# datastore_client = datastore.Client()
-# kind = 'Translate'
-# query = datastore_client.query(kind=kind)
-# content = list(query.fetch())
-# for i in content:
-#     translate_result.append(str(i))
-
-class reCAPTCHA(FlaskForm):
-    recaptcha = RecaptchaField()
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -117,15 +90,11 @@ def index():
 
 @app.route('/review')
 def news():
-    form = reCAPTCHA()
-    return render_template('review.html'
-                           , form = form
-                           )
+    return render_template('review.html')
 
 
 @app.route('/review', methods=['GET', 'POST'])
 def news_post():
-    form = reCAPTCHA()
 
     # get title and content from html
     name = request.form['name']
@@ -133,10 +102,7 @@ def news_post():
     # post new news to datastore entity
     review_class.new_reviews(name, review)
     return redirect(url_for('index'), code=303)
-
-    # return render_template('review.html'
-    #                        , form=form
-    #                        )
+                       
 
 
 if __name__ == '__main__':

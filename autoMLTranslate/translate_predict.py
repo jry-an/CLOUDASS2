@@ -85,7 +85,7 @@ def sample_translate_text_with_model(
     # Display the translation for each input text provided
     for translation in response.translations:
         translated_content.append(translation)
-        print(u"Translated text: {}".format(translation.translated_text))
+        print(u"{}".format(translation.translated_text))
     
     return translated_content
 

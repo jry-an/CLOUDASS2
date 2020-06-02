@@ -20,9 +20,14 @@
 <div class="recent-tweets-en">
   <h2>Most Recent Twitter Posts <h2>
   <p>------------------</p>
-
   {% for item in twitter_list %}
-      <p> {{ item | safe | replace("[", "") | replace("]", "")}} <p>
+         <p> {{ item | replace("[", "") |
+       replace("]", "") |
+        replace("{", "") |
+         replace("}", "") |
+          replace("payloadString", "") |
+           replace(':', "") |
+            replace('"', '') | safe }} </p>
       <p>------------------------------------ </p>
   {% endfor %}
 </div>
@@ -31,8 +36,16 @@
 <div class="recent-tweets-translated">
   <h2>Translated Twitter Posts</h2>
   <p>---------------------------- </p> 
+   <label name="languages"> Choose a language:</label>
+  <button name="spanish" onclick="display_spanish_text()">Spanish</button>
   {% for item in translated_text %}
-      <p> {{ item | safe | replace("[", "") | replace("]", "")}} <p>
+         <p id="spanish_text"> {{ item | replace("[", "") |
+       replace("]", "") |
+        replace("{", "") |
+         replace("}", "") |
+          replace("payloadString", "") |
+           replace(':', "") |
+            replace('"', '') | safe }} </p>
       <p>------------------------------------ </p>
   {% endfor %}
 </div>

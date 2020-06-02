@@ -10,11 +10,7 @@
 
             <label for="review"><b>Enter Review: </b></label>
             <input id="content-box" type="text" placeholder="Enter review here..." name="review" required></input>
-            {{ form.csrf_token}}
-            {{ form.recaptcha }}
-            {% for error in form.recaptcha.errors %}
-              <p style="color:red;"> Validation is invalid. Please try again. </p>
-            {% endfor %}
+
               <button type="submit">Submit</button>
         </form>
       </div>
